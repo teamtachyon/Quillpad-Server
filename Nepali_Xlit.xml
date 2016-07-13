@@ -1,0 +1,241 @@
+<!-- 
+    @Date    : Jan 25, 2013
+    @Author  : Ram Prakash
+    @Version : 1
+ -->
+
+<Quill-Xlit primary="Nepali_New.xml">
+    <features phoneme="ah" >
+        <properties>'ah','vowel','short'</properties>
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_ah_)$'" value="['vA']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_ah_)$'" value="['yA']" />
+        <producer regex="'(_ah_)$'" value="['A']" />
+                
+        <producer regex="'(?:_uh_|_uw_)(_ah_)(_l_)'" value="['ya']" />
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_ah_)'" value="['va']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_ah_)'" value="['ya']" />
+        <producer regex="'(_ah_)'" value="['a']" />
+    </features>
+
+    <features phoneme="aa" >
+        <properties>'aa','vowel'</properties>
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_aa_)'" value="['vA']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_aa_)'" value="['yA']" />    
+        <producer regex="'(_aa_)'" value="['A']" />
+    </features>
+    <features phoneme="ae" >
+        <properties>'ae','vowel'</properties>
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_ae_)'" value="['vA']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_aa_)'" value="['yA']" />
+        <producer regex="'^(_ae_)'" value="['A']" />
+        <producer regex="'(_ae_)'" value="['.c','ai']" />
+    </features>
+    <features phoneme="ao" >
+        <properties>'ao','vowel'</properties>
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_ao_)'" value="['vA']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_ao_)'" value="['yA']" />
+        <producer regex="'(_ao_)'" value="['.C','A']" />
+    </features>
+
+    <features phoneme="ih" >
+        <properties>'ih','vowel','short'</properties>
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_ih_|_iy_|_uh_|_uw_|_eh_|_ey_|_ay_|_ow_|_ow1_)(_ih_)$'" value="['yI']" />
+        <producer regex="'(?:_aw_)(_ih_)$'" value="['vI']" />
+        <producer regex="'(_ih_)$'" value="['I']" />
+        
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_ih_|_iy_|_uh_|_uw_|_eh_|_ey_|_ay_|_ow_|_ow1_)(_ih_)'" value="['yi']" />
+        <producer regex="'(?:_aw_)(_ih_)'" value="['vi']" />
+        <producer regex="'(_ih_)'" value="['i']" />
+    </features>
+
+    <features phoneme="iy" >
+        <properties>'iy','vowel'</properties>
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_ih_|_iy_|_uh_|_uw_|_eh_|_ey_|_ay_)(_iy_)'" value="['yI']" />
+        <producer regex="'(?:_ow_|_ow1_|_aw_)(_iy_)'" value="['vI']" />
+        <producer regex="'(_iy_)'" value="['I']" />
+    </features>
+
+    <features phoneme="uh" >
+        <properties>'uh','vowel'</properties>
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_)(_uh_)$'" value="['yU']" />
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ow_|_ow1_|_aw_)(_uh_)$'" value="['vU']" />        
+        <producer regex="'(_uh_)$'" value="['U']" />
+        
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_)(_uh_)'" value="['yu']" />
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ow_|_ow1_|_aw_)(_uh_)'" value="['vu']" />        
+        <producer regex="'(_uh_)'" value="['u']" />
+    </features>
+
+    <features phoneme="uw" >
+        <properties>'uw','vowel'</properties>
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_)(_uw_)'" value="['yU']" />
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ow_|_ow1_|_aw_)(_uw_)'" value="['vU']" />
+        <producer regex="'(_uw_)'" value="['U']" />
+    </features>
+    
+    <features phoneme="eh" >
+        <properties>'eh','vowel','short'</properties>
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ih_|_iy_|_eh_|_ey_|_ay_)(_eh_)'" value="['ye']" />
+        <producer regex="'(?:_ow_|_ow1_|_aw_)(_eh_)'" value="['ve']" />        
+        <producer regex="'(_eh_)'" value="['e']" />
+    </features>
+    
+    <features phoneme="ey" >
+        <properties>'ey','vowel'</properties>
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ih_|_iy_|_eh_|_ey_|_ay_)(_ey_)'" value="['yE']" />
+        <producer regex="'(?:_ow_|_ow1_|_aw_)(_ey_)'" value="['vE']" />        
+        <producer regex="'(_ey_)'" value="['E']" />
+    </features>
+        
+    <features phoneme="ay" >
+        <properties>'ay','vowel'</properties>
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_ay_)'" value="['vai']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_ay_)'" value="['yai']" />		
+        <producer regex="'(_ay_)'" value="['Ai','ai']" />
+    </features>
+    <features phoneme="oy" >
+        <properties>'oy','vowel'</properties>
+        <producer regex="'(?:_uh_|_uw_|_ow_|_ow1_|_aw_)(_oy_)'" value="['vAy']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_|_ao_|_ae_|_aa_|_ah_)(_oy_)'" value="['yAy']" />
+        <producer regex="'(_oy_)'" value="['Ay']" />
+    </features>
+    
+    <features phoneme="ow" >
+        <properties>'ow','vowel','short'</properties>
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_)(_ow_)'" value="['yo']" />
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ow_|_ow1_|_aw_)(_ow_)'" value="['vo']" />
+        <producer regex="'(_ow_)'" value="['o']" />
+    </features>
+
+    <features phoneme="ow1" >
+        <properties>'ow1','vowel'</properties>
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_)(_ow1_)'" value="['yO']" />
+        <producer regex="'(?:_ah_|_ao_|_ae_|_aa_|_uh_|_uw_|_ow_|_ow1_|_aw_)(_ow1_)'" value="['vO']" />
+        <producer regex="'(_ow1_)'" value="['O']" />
+    </features>       
+    
+    <features phoneme="aw" >
+        <properties>'aw','vowel'</properties>
+        <producer regex="'(_aw_)(?:_vowel_)'" value="['a']" />
+        <producer regex="'(?:_ao_|_ae_|_aa_|_ah_|_uh_|_uw_|_ow_|_ow1_|_aw_)(_aw_)'" value="['vau']" />
+        <producer regex="'(?:_ih_|_iy_|_eh_|_ey_|_ay_)(_aw_)'" value="['yau']" />
+        <producer regex="'(_aw_)'" value="['Au','au']" />
+    </features>
+
+    <features phoneme="k" >
+        <properties>'k','cons','ngroup'</properties>
+        <producer regex="'(_k_)'" value="['k']" />
+    </features>    
+    <features phoneme="g" >
+        <properties>'g','cons','ngroup'</properties>
+        <producer regex="'(_g_)'" value="['g']" />
+    </features>    
+    <features phoneme="ng" >
+        <properties>'ng','cons'</properties>
+        <producer regex="'(_ng_)(?:_k_|_g_)'" value="['.n']" />
+        <producer regex="'(_ng_)'" value="['.ng']" />
+    </features>
+
+    <features phoneme="ch" >
+        <properties>'ch','cons','ngroup'</properties>
+        <producer regex="'(_ch_)'" value="['ch']" />
+    </features>    
+    <features phoneme="jh" >
+        <properties>'jh','cons','ngroup'</properties>
+        <producer regex="'(_jh_)'" value="['j']" />
+    </features>
+
+    <features phoneme="t" >
+        <properties>'t','cons','ngroup'</properties>
+        <producer regex="'(_t_)'" value="['T']" />
+    </features>
+    <features phoneme="d" >
+        <properties>'d','cons','ngroup'</properties>
+        <producer regex="'(_d_)'" value="['D']" />
+    </features>  
+
+    <features phoneme="th" >
+        <properties>'th','cons','ngroup'</properties>
+        <producer regex="'^(_th_)'" value="['th']" />
+        <producer regex="'(_th_)'" value="['t']" />
+    </features>
+    <features phoneme="dh" >
+        <properties>'dh','cons','ngroup'</properties>
+        <producer regex="'(_dh_)'" value="['d']" />
+    </features>
+    <features phoneme="n" >
+        <properties>'n','cons'</properties>
+        <producer regex="'(?:_vowel_)(_n_)(?:_ngroup_)'" value="['.n']" />
+        <producer regex="'(_n_)'" value="['n']" />
+    </features>
+        
+    <features phoneme="p" >
+        <properties>'p','cons','mgroup'</properties>
+        <producer regex="'(_p_)'" value="['p']" />
+    </features>
+    <features phoneme="f" >
+        <properties>'f','cons','mgroup'</properties>
+        <producer regex="'(_f_)'" value="['ph']" />
+    </features>
+    <features phoneme="b" >
+        <properties>'b','cons','mgroup'</properties>
+        <producer regex="'(_b_)'" value="['b']" />
+    </features>
+    <features phoneme="m" >
+        <properties>'m','cons'</properties>
+        <producer regex="'(?:_vowel_)(_m_)(?:_mgroup_)'" value="['.n']" />
+		<producer regex="'(?:_vowel_)(_m_)$'" value="['m','.n']" />        
+        <producer regex="'(_m_)'" value="['m']" />
+    </features>
+
+
+    <features phoneme="y" >
+        <properties>'y','cons'</properties>
+        <producer regex="'(_y_)'" value="['y']" />
+	</features>
+    <features phoneme="r" >
+        <properties>'r','cons'</properties>
+        <producer regex="'(_r_)'" value="['r']" />
+    </features>
+    <features phoneme="l" >
+        <properties>'l','cons'</properties>
+        <producer regex="'(_l_)'" value="['l']" />
+    </features>    
+    <features phoneme="v" >
+        <properties>'v','cons'</properties>
+        <producer regex="'(_v_)'" value="['v']" />
+    </features>
+    <features phoneme="w" >
+        <properties>'w','cons'</properties>
+        <producer regex="'(_w_)'" value="['v']" />
+    </features>    
+    
+    <features phoneme="sh" >
+        <properties>'sh','cons'</properties>
+        <producer regex="'(?:_cons_)(_sh_)'" value="['Sh']" />
+        <producer regex="'(_sh_)'" value="['sh']" />
+    </features>
+    <features phoneme="zh" >
+        <properties>'zh','cons'</properties>
+        <producer regex="'(_zh_)'" value="['Sh']" />
+    </features>
+    <features phoneme="s" >
+        <properties>'s','cons'</properties>
+        <producer regex="'(_s_)'" value="['s']" />
+    </features>
+    <features phoneme="z" >
+        <properties>'z','cons'</properties>
+        <producer regex="'(_z_)'" value="['J','s']" />
+    </features>   
+    <features phoneme="hh" >
+        <properties>'hh','cons'</properties>
+        <producer regex="'(_hh_)'" value="['h']" />
+    </features>
+
+    <features phoneme="-" >
+        <properties>'-'</properties>
+        <producer regex="'(?:_cons_)(_-_)(?:_cons_|_vowel_)'" value="['a','']" />
+        <producer regex="'(_-_)'" value="['']" />
+    </features>    
+
+</Quill-Xlit>
