@@ -20,3 +20,6 @@ EnglishPronouncingTrees/*
 IndianPronouncingTrees/*
 logs/*
 dump/*
+*.zip
+*.bz2
+*.gz
