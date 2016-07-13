@@ -1,0 +1,338 @@
+<!-- 
+    @Date    : Jan 25, 2013
+    @Author  : Ram Prakash
+    @Version : 1
+ -->
+
+<Quill lang="Tamil" script="Tamil" deffont="Latha" epsilon="u'\ue000'" >
+    <preprocessor type="predictive" regex="r'(c)(?=[eiy])'" value="'s'" />
+    <preprocessor type="predictive" regex="r'(c)(?=[^h]|$)'" value="'k'" />
+    <preprocessor type="predictive" regex="r'(ia)'" value="'iya'" />
+    <preprocessor type="predictive" regex="r'(aa)'" value="'A'" />
+    <preprocessor type="predictive" regex="r'(ee)'" value="'I'" />
+    <preprocessor type="predictive" regex="r'(oo)'" value="'U'" />
+    <preprocessor type="predictive" regex="r'(au)'" value="'ou'" />
+    <preprocessor type="predictive" regex="r'(w)'" value="'v'" />
+    <preprocessor type="predictive" regex="r'(x)'" value="'ksh'" />
+    <preprocessor type="predictive" regex="r'(kh|K)'" value="'k'" />
+    <preprocessor type="predictive" regex="r'(gh|G)'" value="'g'" />
+    <preprocessor type="predictive" regex="r'(Ch)'" value="'ch'" />
+    <preprocessor type="predictive" regex="r'(j|z(?!h)|jh|J|Jh)'" value="'j'" />
+    <preprocessor type="predictive" regex="r'(dh|D)'" value="'d'" />
+    <preprocessor type="predictive" regex="r'(ph)'" value="'f'" />    
+    <preprocessor type="predictive" regex="r'(bh|B)'" value="'b'" />
+
+    <!--valid-word-pattern regex="u'(_vowel_?(_cons_(_pulli__cons_)*(_mathra_(_anusvara_|_visarga_)?|_pulli_)?)+)|_vowel_'" /-->
+	<valid-word-pattern regex="u'(_cons__nukta_?(_pulli_(_zwj_|_zwnj_)?_cons__nukta_?)*(_pulli_|(_mathra_?(_anusvara_|_visarga_)?))?|(_vowel_(_anusvara_|_visarga_)?)|_digit_(?![0-9])|[0-9](?!_digit_))+'"/>
+
+    <features unicode="u'\u200c'" >
+        <properties>'zwnj'</properties>
+        <producer regex="u'(_zwnj_)'" value="([''],[''])" />
+    </features>
+    <features unicode="u'\u200d'" >
+        <properties>'zwj'</properties>
+        <producer regex="u'(_zwj_)'" value="([''],[''])" />
+    </features>
+    <features unicode="u'\u0b82'" >
+        <properties>'.n','anusvara'</properties>
+        <producer regex="u'(_.n_)'" value="(['.n'],['n','m'])" />
+    </features>
+    <features unicode="u'\u0b83'" >
+        <properties>'H','visarga'</properties>
+        <producer regex="u'(_H_)(?:_p_)'" value="([''],[''])" />
+        <producer regex="u'(_H_)'" value="(['H'],['g'])" />
+    </features>
+    <features unicode="u'\u0b85'" >
+        <properties>'a','vowel','short'</properties>
+        <producer regex="u'(_a_)'" value="(['a'],['a'])" />
+    </features>
+    <features unicode="u'\u0b86'" >
+        <properties>'A','vowel','long'</properties>
+        <producer regex="u'(_A_)'" value="(['A'],['A','a'])" />
+    </features>
+    <features unicode="u'\u0b87'" >
+        <properties>'i','vowel','short'</properties>
+        <producer regex="u'^(_i_)'" value="(['i'],['i','yi'])" />
+        <producer regex="u'(_i_)'" value="(['i'],['i'])" />
+    </features>
+    <features unicode="u'\u0b88'" >
+        <properties>'I','vowel','long'</properties>
+        <producer regex="u'^(_I_)'" value="(['I'],['I','i','yi'])" />
+        <producer regex="u'(_I_)'" value="(['I'],['I','i'])" />
+    </features>
+    <features unicode="u'\u0b89'" >
+        <properties>'u','vowel','short'</properties>
+        <producer regex="u'^(_u_)'" value="(['u'],['u','vu'])" />
+        <producer regex="u'(_u_)'" value="(['u'],['u'])" />
+    </features>
+    <features unicode="u'\u0b8a'" >
+        <properties>'U','vowel','long'</properties>
+        <producer regex="u'^(_U_)'" value="(['U'],['U','u'])" />
+        <producer regex="u'(_U_)'" value="(['U'],['U','u'])" />
+    </features>
+    <features unicode="u'\u0b8e'" >
+        <properties>'e','vowel','short'</properties>
+        <producer regex="u'^(_e_)'" value="(['e'],['e','ye'])" />
+        <producer regex="u'(_e_)'" value="(['e'],['e'])" />
+    </features>
+    <features unicode="u'\u0b8f'" >
+        <properties>'E','vowel','long'</properties>
+        <producer regex="u'^(_E_)'" value="(['E'],['e','ye'])" />
+        <producer regex="u'(_E_)'" value="(['E'],['e'])" />
+    </features>
+    <features unicode="u'\u0b90'" >
+        <properties>'ai','vowel','long'</properties>
+        <producer regex="u'(_ai_)'" value="(['ai'],['ai'])" />
+    </features>
+    <features unicode="u'\u0b92'" >
+        <properties>'o','vowel','short'</properties>
+        <producer regex="u'(_o_)'" value="(['o'],['o'])" />
+    </features>
+    <features unicode="u'\u0b93'" >
+        <properties>'O','vowel','long'</properties>
+        <producer regex="u'(_O_)'" value="(['O'],['o'])" />
+    </features>
+    <features unicode="u'\u0b94'" >
+        <properties>'au','vowel','long'</properties>
+        <producer regex="u'(_au_)'" value="(['au'],['ou'])" />
+    </features>
+    <features unicode="u'\u0b95'" >
+        <properties>'k','cons','cons1'</properties>
+        <producer regex="u'(_k_)(?:_pulli__k_)'" value="(['k'],['k'])" />
+        <producer regex="u'(?:_k__pulli_)(_k_)(?:_pulli_|_mathra_)'" value="(['k'],['k',''])" />
+        <producer regex="u'(?:_k__pulli_)(_k_)'" value="(['ka'],['ka','a'])" />
+        <producer regex="u'(_k_)(?:_pulli_|_mathra_)'" value="(['k'],['k','g'])" />
+        <producer regex="u'(_k_)'" value="(['ka'],['ka','ga'])" />
+    </features>
+    <features unicode="u'\u0b99'" >
+        <properties>'~N','cons','nasal'</properties>
+        <producer regex="u'(_~N_)_nukta_?(?:_pulli_(?:_k_))'" value="(['~N'],['n'])" />
+        <producer regex="u'(_~N_)(?:_pulli_|_mathra_)'" value="(['~N'],['n','ng'])" />
+        <producer regex="u'(_~N_)'" value="(['~Na'],['na','nga'])" />
+    </features>
+    <features unicode="u'\u0b9a'" >
+        <properties>'ch','cons','cons2'</properties>
+        <producer regex="u'(_ch_)(?:_pulli__ch_)'" value="(['ch'],['ch'])" />
+        <producer regex="u'(?:_ch__pulli_)(_ch_)(?:_pulli_|_mathra_)'" value="(['ch'],['ch','h',''])" />
+        <producer regex="u'(?:_ch__pulli_)(_ch_)'" value="(['ch'],['cha','ha','a'])" />
+        
+        <producer regex="u'(?:_~n__pulli_)(_ch_)(?:_pulli_|_mathra_)'" value="(['ch'],['j'])" />
+        <producer regex="u'(?:_~n__pulli_)(_ch_)'" value="(['ch'],['ja'])" />
+
+        <producer regex="u'(_ch_)(?:_pulli_|_mathra_)'" value="(['ch'],['ch','s'])" />
+        <producer regex="u'(_ch_)'" value="(['ch'],['cha','sa'])" />        
+    </features>
+    <features unicode="u'\u0b9c'" >
+        <properties>'j','cons','cons2'</properties>
+        <producer regex="u'(_j_)(?:_pulli_|_mathra_)'" value="(['j'],['j'])" />
+        <producer regex="u'(_j_)'" value="(['ja'],['ja'])" />
+    </features>
+    <features unicode="u'\u0b9e'" >
+        <properties>'~n','cons','cons2','nasal'</properties>
+        <producer regex="u'(_~n_)_nukta_?(?:_mathra_)'" value="(['~n'],['n','ny','gn'])" />
+        <producer regex="u'(_~n_)_nukta_?(?:_pulli_)'" value="(['~n'],['n','gn'])" />
+        <producer regex="u'(_~n_)_nukta_?'" value="(['~na'],['na','nya','gna'])" />
+    </features>
+    <features unicode="u'\u0b9f'" >
+        <properties>'T','cons','cons3'</properties>
+        <producer regex="u'(_T_)(?:_pulli__T_)'" value="(['T'],['t'])" />
+        <producer regex="u'(?:_T__pulli_)(_T_)(?:_pulli_|_mathra_)'" value="(['T'],['t',''])" />
+        <producer regex="u'(?:_T__pulli_)(_T_)'" value="(['Ta'],['ta','a'])" />
+        <producer regex="u'(_T_)(?:_pulli_|_mathra_)'" value="(['T'],['t','d'])" />
+        <producer regex="u'(_T_)'" value="(['Ta'],['ta','da'])" />        
+    </features>
+    <features unicode="u'\u0ba3'" >
+        <properties>'N','cons','cons3','nasal'</properties>
+        <producer regex="u'(_N_)_nukta_?(?:_pulli_(?:_r_|_R_))'" value="(['N'],['n','nd'])" />
+        <producer regex="u'(_N_)_nukta_?(?:_pulli_|_mathra_)'" value="(['N'],['n'])" />
+        <producer regex="u'(_N_)_nukta_?'" value="(['Na'],['na'])" />
+    </features>
+    <features unicode="u'\u0ba4'" >
+        <properties>'t','cons','cons4'</properties>
+        <producer regex="u'(_t_)(?:_pulli__t_)'" value="(['t'],['t'])" />
+        <producer regex="u'(?:_t__pulli_)(_t_)(?:_pulli_|_mathra_)'" value="(['t'],['t','h',''])" />
+        <producer regex="u'(?:_t__pulli_)(_t_)'" value="(['ta'],['ta','ha','a'])" />
+        <producer regex="u'(_t_)(?:_pulli_|_mathra_)'" value="(['t'],['t','th','d'])" />
+        <producer regex="u'(_t_)'" value="(['ta'],['ta','tha','da'])" />        
+
+    </features>
+    <features unicode="u'\u0ba8'" >
+        <properties>'n','cons','cons4','nasal'</properties>
+        <producer regex="u'(_n_)_nukta_?(?:_pulli_|_mathra_)'" value="(['n'],['n'])" />
+        <producer regex="u'(_n_)_nukta_?'" value="(['na'],['na'])" />
+    </features>
+    <features unicode="u'\u0ba9'" >
+        <properties>'Nn','cons','nasal'</properties>
+        <producer regex="u'(_Nn_)_nukta_?(?:_pulli_(?:_r_|_R_))'" value="(['Nn'],['n','nd'])" />
+        <producer regex="u'(_Nn_)_nukta_?(?:_pulli_|_mathra_)'" value="(['Nn'],['n'])" />
+        <producer regex="u'(_Nn_)_nukta_?'" value="(['Nna'],['na'])" />
+    </features>
+    <features unicode="u'\u0baa'" >
+        <properties>'p','cons','cons5','unaspirated'</properties>
+        <producer regex="u'(?:_H_)(_p_)_nukta_?(?:_pulli_|_mathra_)'" value="(['f'],['f'])" />
+        <producer regex="u'(?:_H_)(_p_)_nukta_?'" value="(['fa'],['fa'])" />
+        
+        <producer regex="u'(_p_)(?:_pulli__p_)'" value="(['p'],['p'])" />
+        <producer regex="u'(?:_p__pulli_)(_p_)(?:_pulli_|_mathra_)'" value="(['p'],['p',''])" />
+        <producer regex="u'(?:_p__pulli_)(_p_)'" value="(['pa'],['pa','a'])" />        
+        <producer regex="u'(_p_)(?:_pulli_|_mathra_)'" value="(['p'],['p','b'])" />
+        <producer regex="u'(_p_)'" value="(['pa'],['pa','ba'])" />
+
+    </features>
+    <features unicode="u'\u0bae'" >
+        <properties>'m','cons','cons5','nasal'</properties>
+        <producer regex="u'(_m_)_nukta_?(?:_pulli_|_mathra_)'" value="(['m'],['m'])" />
+        <producer regex="u'(_m_)_nukta_?'" value="(['ma'],['ma'])" />
+    </features>
+    <features unicode="u'\u0baf'" >
+        <properties>'y','cons','semi-vowel'</properties>
+        <producer regex="u'(?:_vowel_|_mathra_)(_y_)_nukta_?(?:_pulli_)'" value="(['y'],['y','i'])" />
+        <producer regex="u'(_y_)_nukta_?(?:_pulli_|_mathra_)'" value="(['y'],['y'])" />
+        <producer regex="u'(_y_)_nukta_?'" value="(['ya'],['ya'])" />
+    </features>
+    <features unicode="u'\u0bb0'" >
+        <properties>'r','cons','semi-vowel'</properties>
+        <producer regex="u'(_r_)_nukta_?(?:_pulli_|_mathra_)'" value="(['r'],['r'])" />
+        <producer regex="u'(_r_)_nukta_?'" value="(['ra'],['ra'])" />
+    </features>
+    <features unicode="u'\u0bb1'" >
+        <properties>'R','cons','semi-vowel'</properties>
+        <producer regex="u'(_R_)_nukta_?(?:_pulli__R_)'" value="(['R'],['t'])" />
+        <producer regex="u'(_R_)_nukta_?(?:_pulli_|_mathra_)'" value="(['R'],['r'])" />
+        <producer regex="u'(_R_)_nukta_?'" value="(['Ra'],['ra'])" />
+    </features>
+    <features unicode="u'\u0bb2'" >
+        <properties>'l','cons','semi-vowel'</properties>
+        <producer regex="u'(_l_)_nukta_?(?:_pulli_|_mathra_)'" value="(['l'],['l'])" />
+        <producer regex="u'(_l_)_nukta_?'" value="(['la'],['la'])" />
+    </features>
+    <features unicode="u'\u0bb3'" >
+        <properties>'L','cons','semi-vowel'</properties>
+        <producer regex="u'(_L_)_nukta_?(?:_pulli_|_mathra_)'" value="(['L'],['l'])" />
+        <producer regex="u'(_L_)_nukta_?'" value="(['La'],['la'])" />
+    </features>
+    <features unicode="u'\u0bb4'" >
+        <properties>'zh','cons','semi-vowel'</properties>
+        <producer regex="u'(_zh_)_nukta_?(?:_pulli_|_mathra_)'" value="(['L'],['l','zh'])" />
+        <producer regex="u'(_zh_)_nukta_?'" value="(['La'],['la','zha'])" />
+    </features>
+    <features unicode="u'\u0bb5'" >
+        <properties>'v','cons','semi-vowel'</properties>
+        <producer regex="u'(_v_)_nukta_?(?:_pulli_|_mathra_)'" value="(['v'],['v'])" />
+        <producer regex="u'(_v_)_nukta_?'" value="(['va'],['va'])" />
+    </features>
+    <features unicode="u'\u0bb7'" >
+        <properties>'sh','cons','cons6'</properties>
+        <producer regex="u'(_sh_)_nukta_?(?:_pulli_|_mathra_|$)'" value="(['sh'],['sh'])" />
+        <producer regex="u'(_sh_)_nukta_?'" value="(['sha'],['sha'])" />
+    </features>
+    <features unicode="u'\u0bb8'" >
+        <properties>'s','cons','cons6'</properties>
+        <producer regex="u'(_s_)_nukta_?(?:_pulli_|_mathra_)'" value="(['s'],['s'])" />
+        <producer regex="u'(_s_)_nukta_?'" value="(['sa'],['sa'])" />
+    </features>
+    <features unicode="u'\u0bb9'" >
+        <properties>'h','cons','cons6'</properties>
+        <producer regex="u'(_h_)_nukta_?(?:_pulli_|_mathra_)'" value="(['h'],['h'])" />
+        <producer regex="u'(_h_)_nukta_?'" value="(['ha'],['ha'])" />
+    </features>
+    <features unicode="u'\u0bbe'" >
+        <properties>'A0','mathra','long'</properties>
+        <producer regex="u'(_A0_)'" value="(['A'],['A','a'])" />
+    </features>
+    <features unicode="u'\u0bbf'" >
+        <properties>'i0','mathra','short'</properties>
+        <producer regex="u'(?:_cons_)(_i0_)(?:_y_|_r_|_l_)(?!_pulli_$)'" value="(['i'],['i',''])" />
+        <producer regex="u'(_i0_)$'" value="(['i'],['i','y'])" />
+        <producer regex="u'(_i0_)'" value="(['i'],['i'])" />
+    </features>
+    <features unicode="u'\u0bc0'" >
+        <properties>'I0','mathra','long'</properties>
+        <producer regex="u'(_I0_)'" value="(['I'],['I','i'])" />
+    </features>
+    <features unicode="u'\u0bc1'" >
+        <properties>'u0','mathra','short'</properties>
+        <producer regex="u'(?:_cons_)(_u0_)(?:_v_)'" value="(['u'],['u',''])" />
+        <producer regex="u'(_u0_)'" value="(['u'],['u'])" />
+    </features>
+    <features unicode="u'\u0bc2'" >
+        <properties>'U0','mathra','long'</properties>
+        <producer regex="u'(_U0_)'" value="(['U'],['U','u'])" />
+    </features>
+    <features unicode="u'\u0bc6'" >
+        <properties>'e0','mathra','short'</properties>
+        <producer regex="u'(_e0_)'" value="(['e'],['e'])" />
+    </features>
+    <features unicode="u'\u0bc7'" >
+        <properties>'E0','mathra','long'</properties>
+        <producer regex="u'(_E0_)'" value="(['E'],['e','ei'])" />
+    </features>
+    <features unicode="u'\u0bc8'" >
+        <properties>'ai0','mathra','long'</properties>
+        <producer regex="u'(_ai0_)'" value="(['ai'],['ai'])" />
+    </features>
+    <features unicode="u'\u0bca'" >
+        <properties>'o0','mathra','short'</properties>
+        <producer regex="u'(_o0_)'" value="(['o'],['o'])" />
+    </features>
+    <features unicode="u'\u0bcb'" >
+        <properties>'O0','mathra','long'</properties>
+        <producer regex="u'(_O0_)'" value="(['O'],['o'])" />
+    </features>
+    <features unicode="u'\u0bcc'" >
+        <properties>'au0','mathra','long'</properties>
+        <producer regex="u'(_au0_)'" value="(['au'],['ou'])" />
+    </features>
+    <features unicode="u'\u0bcd'" >
+        <properties>'pulli'</properties>
+        <producer regex="u'(_pulli_)'" value="([''],[''])" />
+    </features>
+    <features unicode="u'\u0be7'" >
+        <properties>'1','digit'</properties>
+        <producer regex="u'(_1_)'" value="(['1'],['1'])" />
+    </features>
+    <features unicode="u'\u0be8'" >
+        <properties>'2','digit'</properties>
+        <producer regex="u'(_2_)'" value="(['2'],['2'])" />
+    </features>
+    <features unicode="u'\u0be9'" >
+        <properties>'3','digit'</properties>
+        <producer regex="u'(_3_)'" value="(['3'],['3'])" />
+    </features>
+    <features unicode="u'\u0bea'" >
+        <properties>'4','digit'</properties>
+        <producer regex="u'(_4_)'" value="(['4'],['4'])" />
+    </features>
+    <features unicode="u'\u0beb'" >
+        <properties>'5','digit'</properties>
+        <producer regex="u'(_5_)'" value="(['5'],['5'])" />
+    </features>
+    <features unicode="u'\u0bec'" >
+        <properties>'6','digit'</properties>
+        <producer regex="u'(_6_)'" value="(['6'],['6'])" />
+    </features>
+    <features unicode="u'\u0bed'" >
+        <properties>'7','digit'</properties>
+        <producer regex="u'(_0_)'" value="(['0'],['0'])" />
+    </features>
+    <features unicode="u'\u0bee'" >
+        <properties>'8','digit'</properties>
+        <producer regex="u'(_8_)'" value="(['8'],['8'])" />
+    </features>
+    <features unicode="u'\u0bef'" >
+        <properties>'9','digit'</properties>
+        <producer regex="u'(_9_)'" value="(['9'],['9'])" />
+    </features>
+    <features unicode="u'\u0bf0'" >
+        <properties>'10','digit'</properties>
+        <producer regex="u'(_10_)'" value="(['10'],['10'])" />
+    </features>
+    <features unicode="u'\u0bf1'" >
+        <properties>'100','digit'</properties>
+        <producer regex="u'(_100_)'" value="(['100'],['100'])" />
+    </features>
+    <features unicode="u'\u0bf2'" >
+        <properties>'1000','digit'</properties>
+        <producer regex="u'(_1000_)'" value="(['1000'],['1000'])" />
+    </features>
+</Quill>

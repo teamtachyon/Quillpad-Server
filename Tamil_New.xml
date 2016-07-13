@@ -1,0 +1,723 @@
+<!-- 
+    @Date    : Jan 25, 2013
+    @Author  : Ram Prakash
+    @Version : 1
+ -->
+
+<Quill-Primary>
+    <preprocessor regex="r'^(oum)$'" value="'OM'" />
+
+	<CF-Mappings>
+		<mapping lit="k" aliases="['k','g']">
+			<attributes context="">
+				<group>"cons1"</group>
+				<prop name="k" >["k","cons"]</prop>
+				<code>u'\u0b95'</code>
+			</attributes>
+		</mapping>
+		<!--mapping lit="kh" aliases="['kh','K']">
+			<attributes context="">
+				<group>"cons1"</group>
+				<prop name="kh" >["kh","cons"]</prop>
+				<code>u'\u0b95'</code>
+			</attributes>
+		</mapping>		
+		<mapping lit="g" aliases="['g']">
+			<attributes context="">
+				<group>"cons1"</group>
+				<prop name="g" >["g","cons"]</prop>
+				<code>u'\u0b95'</code>
+			</attributes>
+		</mapping>		
+		<mapping lit="gh" aliases="['gh','G']">
+			<attributes context="">
+				<group>"cons1"</group>
+				<prop name="gh" >["gh","cons"]</prop>
+				<code>u'\u0b95'</code>
+			</attributes>
+		</mapping-->
+		<mapping lit="~N" aliases="['~N','NG']">
+			<attributes context="">
+				<group>"cons1"</group>
+				<prop name="~N" >["~N","cons"]</prop>
+				<code>u'\u0b99'</code>
+			</attributes>
+		</mapping>
+				
+		<mapping lit="ch" aliases="['c','ch']">
+			<attributes context="">
+				<group>"cons2"</group>
+				<prop name="ch" >["ch","cons"]</prop>
+				<code>u'\u0b9a'</code>
+			</attributes>
+		</mapping>		
+		<!--mapping lit="chh" aliases="['chh','Ch','CH']">
+			<attributes context="">
+				<group>"cons2"</group>
+				<prop name="chh" >["chh","cons"]</prop>
+				<code>u'\u0b9a'</code>
+			</attributes>
+		</mapping-->
+		<mapping lit="j" aliases="['j','jh']">
+			<attributes context="">
+				<group>"cons2"</group>
+				<prop name="j" >["j","cons"]</prop>
+				<code>u'\u0b9c'</code>
+			</attributes>
+		</mapping>
+		<!--mapping lit="jh" aliases="['jh','Jh','JH']">
+			<attributes context="">
+				<group>"cons2"</group>
+				<prop name="jh" >["jh","cons"]</prop>
+				<code>u'\u0b9c'</code>
+			</attributes>
+		</mapping-->
+		<mapping lit="~n" aliases="['~n']">
+			<attributes context="">
+				<group>"cons2"</group>
+				<prop name="~n" >["~n","cons"]</prop>
+				<code>u'\u0b9e'</code>
+			</attributes>
+		</mapping>								
+
+		<mapping lit="T" aliases="['T','D']">
+			<attributes context="">
+				<group>"cons3"</group>
+				<prop name="T" >["T","cons"]</prop>
+				<code>u'\u0b9f'</code>
+			</attributes>
+		</mapping>									
+		<!--mapping lit="Th" aliases="['Th','TH']">
+			<attributes context="">
+				<group>"cons3"</group>
+				<prop name="Th" >["Th","cons"]</prop>
+				<code>u'\u0b9f'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="D" aliases="['D']">
+			<attributes context="">
+				<group>"cons3"</group>
+				<prop name="D" >["D","cons"]</prop>
+				<code>u'\u0b9f'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="Dh" aliases="['Dh']">
+			<attributes context="">
+				<group>"cons3"</group>
+				<prop name="Dh" >["Dh","cons"]</prop>
+				<code>u'\u0b9f'</code>
+			</attributes>
+		</mapping-->
+		<mapping lit="N" aliases="['N']">
+			<attributes context="">
+				<group>"cons3"</group>
+				<prop name="N" >["N","cons"]</prop>
+				<code>u'\u0ba3'</code>
+			</attributes>
+		</mapping>
+										
+		<mapping lit="t" aliases="['t','th','d']">
+			<attributes context="">
+				<group>"cons4"</group>
+				<prop name="t" >["t","cons"]</prop>
+				<code>u'\u0ba4'</code>
+			</attributes>
+		</mapping>									
+		<!--mapping lit="th" aliases="['th']">
+			<attributes context="">
+				<group>"cons4"</group>
+				<prop name="th" >["th","cons"]</prop>
+				<code>u'\u0ba4'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="d" aliases="['d']">
+			<attributes context="">
+				<group>"cons4"</group>
+				<prop name="d" >["d","cons"]</prop>
+				<code>u'\u0ba4'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="dh" aliases="['dh']">
+			<attributes context="">
+				<group>"cons4"</group>
+				<prop name="dh" >["dh","cons"]</prop>
+				<code>u'\u0ba4'</code>
+			</attributes>
+		</mapping-->
+		<mapping lit="n" aliases="['n']">
+			<attributes context="">
+				<group>"cons4"</group>
+				<prop name="n" >["n","cons"]</prop>
+				<code>u'\u0ba8'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="Nn" aliases="['Nn']">
+			<attributes context="">
+				<group>"cons4"</group>
+				<prop name="Nn" >["Nn","cons"]</prop>
+				<code>u'\u0ba9'</code>
+			</attributes>
+		</mapping>		
+		<mapping lit="p" aliases="['p']">
+			<attributes context="">
+				<group>"cons5"</group>
+				<prop name="p" >["p","cons"]</prop>
+				<code>u'\u0baa'</code>
+			</attributes>
+		</mapping>									
+		<mapping lit="ph" aliases="['f','ph']">
+			<attributes context="">
+				<group>"cons5"</group>
+				<prop name="ph" >["ph","cons"]</prop>
+				<code>u'\u0b83\u0baa'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="b" aliases="['b']">
+			<attributes context="">
+				<group>"cons5"</group>
+				<prop name="b" >["b","cons"]</prop>
+				<code>u'\u0baa'</code>
+			</attributes>
+		</mapping>
+		<!--mapping lit="bh" aliases="['bh']">
+			<attributes context="">
+				<group>"cons5"</group>
+				<prop name="bh" >["bh","cons"]</prop>
+				<code>u'\u0baa'</code>
+			</attributes>
+		</mapping-->
+		<mapping lit="m" aliases="['m']">
+			<attributes context="">
+				<group>"cons5"</group>
+				<prop name="m" >["m","cons"]</prop>
+				<code>u'\u0bae'</code>
+			</attributes>
+		</mapping>
+		
+		<mapping lit="y" aliases="['y']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="y" >["y","cons"]</prop>
+				<code>u'\u0baf'</code>
+			</attributes>
+		</mapping>									
+		<mapping lit="r" aliases="['r']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="r" >["r","cons"]</prop>
+				<code>u'\u0bb0'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="R" aliases="['R']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="R" >["R","cons"]</prop>
+				<code>u'\u0bb1'</code>
+			</attributes>
+		</mapping>		
+		<mapping lit="l" aliases="['l']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="b" >["b","cons"]</prop>
+				<code>u'\u0bb2'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="L" aliases="['L']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="L" >["L","cons"]</prop>
+				<code>u'\u0bb3'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="zh" aliases="['zh']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="zh" >["zh","cons"]</prop>
+				<code>u'\u0bb4'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="v" aliases="['v','w']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="v" >["v","cons"]</prop>
+				<code>u'\u0bb5'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="sh" aliases="['sh','S']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="sh" >["sh","cons"]</prop>
+				<code>u'\u0bb6'</code>
+			</attributes>
+		</mapping>									
+		<mapping lit="Sh" aliases="['Sh','SH']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="Sh" >["Sh","cons"]</prop>
+				<code>u'\u0bb7'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="s" aliases="['s']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="s" >["s","cons"]</prop>
+				<code>u'\u0bb8'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="h" aliases="['h']">
+			<attributes context="">
+				<group>"cons6"</group>
+				<prop name="h" >["h","cons"]</prop>
+				<code>u'\u0bb9'</code>
+			</attributes>
+		</mapping>
+
+		<mapping lit="J" aliases="['J']">
+			<attributes context="">
+				<group>"cons7"</group>
+				<prop name="J" >["J","cons","extended"]</prop>
+				<code>u'\u0b9c'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="x" aliases="['x']">
+			<attributes context="">
+				<group>"cons7"</group>
+				<prop name="x" >["x","cons","extended"]</prop>
+				<code>u'\u0b95\u0bcd\u0bb7'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="GY" aliases="['GY']">
+			<attributes context="">
+				<group>"cons7"</group>
+				<prop name="GY" >["GY","cons","extended"]</prop>
+				<code>u'\u0b9c\u0bcd\u0b9e'</code>
+			</attributes>
+		</mapping>
+
+		<mapping lit=".n" aliases="['.n','.m']">
+			<attributes context="">
+				<group>"dots"</group>
+				<prop name=".n" >[".n","dot","anusvara"]</prop>
+				<code>u'\u0b82'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="H" aliases="['H','q']">
+			<attributes context="">
+				<group>"dots"</group>
+				<prop name="H" >["H","dot","visarga"]</prop>
+				<code>u'\u0b83'</code>
+			</attributes>
+		</mapping>
+		<!--mapping lit=".c" aliases="['.c']">
+			<attributes context="">
+				<group>"dots"</group>
+				<prop name=".c" >[".c","dot","chandra"]</prop>
+				<code>u''</code>
+			</attributes>
+		</mapping>
+		<mapping lit=".N" aliases="['.N']">
+			<attributes context="">
+				<group>"dots"</group>
+				<prop name=".N" >[".N","dot","chandra-bindu"]</prop>
+				<code>u''</code>
+			</attributes>
+		</mapping>
+		<mapping lit=".a" aliases="['.a']">
+			<attributes context="">
+				<group>"dots"</group>
+				<prop name=".a" >[".a","dot","avagraha"]</prop>
+				<code>u'\u0bbd'</code>
+			</attributes>
+		</mapping-->										
+
+		<!--OM-->
+		<mapping lit="OM" aliases="['OM']">
+			<attributes context="">
+				<group>"OM"</group>
+				<prop name="OM" >["OM"]</prop>
+				<code>u'\u0950'</code>
+			</attributes>
+		</mapping>
+		
+		<mapping lit="^" aliases="['^']">
+			<attributes context="">
+				<group>"Zero-Width-Joiner"</group>
+				<prop name="^" >["^","zwj","zwm","insignificant"]</prop>
+				<code>u'\u200d'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="^^" aliases="['^^']">
+			<attributes context="">
+				<group>"Zero-Width-Non-Joiner"</group>
+				<prop name="^^" >["^^","zwnj","zwm","insignificant"]</prop>
+				<code>u'\u200c'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="/" aliases="['/']">
+			<attributes context="">
+				<group>"Delim"</group>
+				<prop name="/" >["/","delim"]</prop>
+				<code>u'\u0bcd\u200c'</code>
+			</attributes>
+		</mapping>
+		<mapping lit=".h" aliases="['.h']">
+			<attributes context="">
+				<group>"halanth"</group>
+				<prop name=".h" >[".h","halanth"]</prop>
+				<code>u'\u0bcd'</code>
+			</attributes>
+		</mapping>	
+		<mapping lit=".x" aliases="['.x']">
+			<attributes context="">
+				<group>"nukta"</group>
+				<prop name=".x" >[".x","nukta"]</prop>
+				<code>u''</code>
+			</attributes>
+		</mapping>
+		<!-- Digits-->
+		<mapping lit="0" aliases="['0']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="0" >["digit"]</prop>
+				<code>u'\u0be6'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="1" aliases="['1']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="1" >["digit"]</prop>
+				<code>u'\u0be7'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="2" aliases="['2']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="2" >["digit"]</prop>
+				<code>u'\u0be8'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="3" aliases="['3']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="3" >["digit"]</prop>
+				<code>u'\u0be9'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="4" aliases="['4']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="4" >["digit"]</prop>
+				<code>u'\u0bea'</code>
+			</attributes>
+		</mapping>						
+		<mapping lit="5" aliases="['5']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="5" >["digit"]</prop>
+				<code>u'\u0beb'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="6" aliases="['6']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="6" >["digit"]</prop>
+				<code>u'\u0bec'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="7" aliases="['7']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="7" >["digit"]</prop>
+				<code>u'\u0bed'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="8" aliases="['8']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="8" >["digit"]</prop>
+				<code>u'\u0bee'</code>
+			</attributes>
+		</mapping>
+		<mapping lit="9" aliases="['9']">
+			<attributes context="">
+				<group>"Digits"</group>
+				<prop name="9" >["digit"]</prop>
+				<code>u'\u0bef'</code>
+			</attributes>
+		</mapping>
+	</CF-Mappings>
+	<CS-Mappings>			
+		<mapping lit="a" aliases="['a']">
+			<attributes context='(?:_cons__nukta_?)(_a_)'>
+				<group>"mathra"</group>
+				<prop name="a0" >["a0","mathra"]</prop>
+				<code>u''</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="a" >["a","vowel"]</prop>
+				<code>u'\u0b85'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="A" aliases="['A','aa']">
+			<attributes context='(?:_cons__nukta_?)(_A_)'>
+				<group>"mathra"</group>
+				<prop name="A0" >["A0","mathra"]</prop>
+				<code>u'\u0bbe'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="A" >["A","vowel"]</prop>
+				<code>u'\u0b86'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="i" aliases="['i']">
+			<attributes context='(?:_cons__nukta_?)(_i_)'>
+				<group>"mathra"</group>
+				<prop name="i0" >["i0","mathra"]</prop>
+				<code>u'\u0bbf'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="i" >["i","vowel"]</prop>
+				<code>u'\u0b87'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="I" aliases="['I','ii','ee']">
+			<attributes context='(?:_cons__nukta_?)(_I_)'>
+				<group>"mathra"</group>
+				<prop name="I0" >["I0","mathra"]</prop>
+				<code>u'\u0bc0'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="I" >["I","vowel"]</prop>
+				<code>u'\u0b88'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="u" aliases="['u']">
+			<attributes context='(?:_cons__nukta_?)(_u_)'>
+				<group>"mathra"</group>
+				<prop name="u0" >["u0","mathra"]</prop>
+				<code>u'\u0bc1'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="u" >["u","vowel"]</prop>
+				<code>u'\u0b89'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="U" aliases="['U','oo']">
+			<attributes context='(?:_cons__nukta_?)(_U_)'>
+				<group>"mathra"</group>
+				<prop name="U0" >["U0","mathra"]</prop>
+				<code>u'\u0bc2'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="U" >["U","vowel"]</prop>
+				<code>u'\u0b8a'</code>
+			</attributes>			
+		</mapping>		
+		<!--mapping lit="RRi" aliases="['RRi','Ru','Ri']">
+			<attributes context='(?:_cons__nukta_?)(_RRi_)'>
+				<group>"mathra"</group>
+				<prop name="RRi0" >["RRi0","mathra"]</prop>
+				<code>u'\u0bc3'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="RRi" >["RRi","vowel"]</prop>
+				<code>u'\u0b8b'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="RRI" aliases="['RRI','RU']">
+			<attributes context='(?:_cons__nukta_?)(_RRI_)'>
+				<group>"mathra"</group>
+				<prop name="RRI0" >["RRI0","mathra"]</prop>
+				<code>u'\u0bc4'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="RRI" >["RRI","vowel"]</prop>
+				<code>u'\u0be0'</code>
+			</attributes>			
+		</mapping-->
+		<mapping lit="e" aliases="['e']">
+			<attributes context='(?:_cons__nukta_?)(_e_)'>
+				<group>"mathra"</group>
+				<prop name="e0" >["e0","mathra"]</prop>
+				<code>u'\u0bc6'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="e" >["e","vowel"]</prop>
+				<code>u'\u0b8e'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="E" aliases="['E']">
+			<attributes context='(?:_cons__nukta_?)(_E_)'>
+				<group>"mathra"</group>
+				<prop name="E0" >["E0","mathra"]</prop>
+				<code>u'\u0bc7'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="E" >["E","vowel"]</prop>
+				<code>u'\u0b8f'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="ai" aliases="['ai']">
+			<attributes context='(?:_cons__nukta_?)(_ai_)'>
+				<group>"mathra"</group>
+				<prop name="ai0" >["ai0","mathra"]</prop>
+				<code>u'\u0bc8'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="ai" >["ai","vowel"]</prop>
+				<code>u'\u0b90'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="o" aliases="['o']">
+			<attributes context='(?:_cons__nukta_?)(_o_)'>
+				<group>"mathra"</group>
+				<prop name="o0" >["o0","mathra"]</prop>
+				<code>u'\u0bca'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="o" >["o","vowel"]</prop>
+				<code>u'\u0b92'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="O" aliases="['O']">
+			<attributes context='(?:_cons__nukta_?)(_O_)'>
+				<group>"mathra"</group>
+				<prop name="O0" >["O0","mathra"]</prop>
+				<code>u'\u0bcb'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="O" >["O","vowel"]</prop>
+				<code>u'\u0b93'</code>
+			</attributes>			
+		</mapping>
+		<mapping lit="au" aliases="['au','ou']">
+			<attributes context='(?:_cons__nukta_?)(_au_)'>
+				<group>"mathra"</group>
+				<prop name="au0" >["au0","mathra"]</prop>
+				<code>u'\u0bcc'</code>
+			</attributes>
+			<attributes context=''>
+				<group>"vowel"</group>
+				<prop name="au" >["au","vowel"]</prop>
+				<code>u'\u0b94'</code>
+			</attributes>			
+		</mapping>
+
+	</CS-Mappings>
+	
+	<akshara regex='_vowel__dot_?|_cons_(_nukta_)?(_halanth_(_zwj_|_zwnj_)?_cons_(_nukta_)?){0,3}(_mathra_(_dot_)?|_halanth_(_zwj_|_zwnj_)?$)?|_digit_'/>
+	<simple-akshara regex='^_vowel__dot_?$|^_cons_(_nukta_)?((_dot_)|(_mathra_)|(_halanth_(_zwj_|_zwnj_)?))?$'/>
+	
+	<!--akshara regex='_cons_(_nukta_)?(_halanth_(_zwj_|_zwnj_)?_cons_(_nukta_)?){1,3}(_mathra_(_dot_)?)'/-->
+	<render-rules>
+		<rule prop = 'digit'>
+			<producer regex='(_digit_)' replace='\1'/>
+		</rule>
+		<rule prop = 'vowel'>
+			<producer regex='(_vowel_)' replace='\1'/>
+		</rule>
+		<rule prop = 'mathra'>
+			<producer regex='(_mathra_)' replace='\1'/>
+		</rule>
+		<rule prop = 'halanth'>
+			<producer regex='(_halanth_)' replace='\1'/>
+		</rule>
+		<rule prop = 'nukta'>
+			<producer regex='(_nukta_)' replace=''/>
+		</rule>	
+		<rule prop = 'dot'>
+			<producer regex='(_dot_)' replace='\1'/>
+		</rule>
+		<rule prop = 'zwm'>
+			<!-- These must be followed by halanth.. else have no meaning. So force halanth even if user skips it-->
+			<producer regex='(?&lt;=_halanth_)(_zwm_)' replace='\1'/>
+			<producer regex='(_zwm_)' replace='_.h_\1'/>
+		</rule>
+		<rule prop = 'delim'>
+			<producer regex='(?&lt;=_vowel_)(_delim_)' replace=''/>
+			<producer regex='(?&lt;=_mathra_)(_delim_)' replace=''/>
+			<producer regex='(_delim_)' replace='\1'/>
+		</rule>		
+		<rule prop = 'OM'>
+			<producer regex='(_OM_)' replace='\1'/>
+		</rule>					
+		<rule prop = 'cons'>
+			<producer regex='(?&lt;=_cons_)(_cons__nukta_?)$' replace='_.h_\1_.h_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_cons__nukta_?)$' replace='_.h_\1_.h_'/>			
+			<producer regex='(_cons__nukta_?)$' replace='\1_.h_'/>		
+			
+			<producer regex='(?&lt;=_cons_)(_cons__nukta_?)' replace='_.h_\1'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_cons__nukta_?)' replace='_.h_\1'/>			
+			<producer regex='(_cons__nukta_?)' replace='\1'/>
+		</rule>
+	</render-rules>
+	
+	<utolit-rules>
+		<rule prop = 'digit'>
+			<producer regex='(_digit_)' replace='\1'/>
+		</rule>	
+		<rule prop = 'vowel'>
+			<producer regex='(?&lt;=_cons__nukta_)(_vowel_)' replace='_/_\1'/>
+			<producer regex='(?&lt;=_cons_)(_vowel_)' replace='_/_\1'/>
+			<producer regex='(?&lt;=_vowel_)(_vowel_)' replace='_/_\1'/>
+			<producer regex='(?&lt;=_mathra_)(_vowel_)' replace='_/_\1'/>
+			<producer regex='(_vowel_)' replace='\1'/>
+		</rule>
+		<rule prop = 'mathra'>
+			<producer regex='(_mathra_)' replace='\1'/>
+		</rule>
+		<rule prop = 'halanth'>
+			<producer regex='(_.h_)(?!_cons_|$)' replace="\1"/>
+			<!--producer regex='(_.h_)(?=_h_)' replace="\1"/-->
+			<producer regex='(_.h_)' replace=""/>
+		</rule>
+		<rule prop = 'nukta'>
+			<producer regex='(_nukta_)' replace='\1'/>
+		</rule>
+		<rule prop = 'dot'>
+			<producer regex='(_dot_)' replace='\1'/>
+		</rule>			
+		<rule prop = 'zwm'>
+			<producer regex='(_zwm_)' replace='\1'/>
+		</rule>					
+		<rule prop = '/'>
+			<producer regex='(_/_)' replace='\1'/>
+		</rule>					
+		<rule prop = 'cons'>
+			<producer regex='(_cons_)(?=_cons_|_dot_|_vowel_|$)' replace="\1_a0_"/>
+			<producer regex='^(_cons_)$' replace="\1_a0_"/>
+			<producer regex='(_cons_)' replace="\1"/>
+		</rule>
+	</utolit-rules>
+	<examples>
+		<example>
+			<input>raaj/kumaar</input>
+			<note>Note the use of '/' in this example</note>
+		</example>
+		<example>
+			<input>rAShTrapati</input>
+			<note>We can use either 'aa' or 'A'</note>
+		</example>
+		<example>
+			<input>raaj.h^^kumaar</input>
+			<note>It can be written this way too.</note>
+		</example>
+		<example>
+			<input>kanna.mbaaDi</input>
+			<note>You can use .n or .m for anusvara</note>
+		</example>						
+	</examples>
+</Quill-Primary>

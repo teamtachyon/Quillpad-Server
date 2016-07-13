@@ -1,0 +1,870 @@
+<!-- 
+    @Date    : Jan 25, 2013
+    @Author  : Ram Prakash
+    @Version : 1
+ -->
+
+<Quill-Primary>
+    <preprocessor regex="r'(ou)'" value="'au'" />
+    <preprocessor regex="r'(aa)'" value="'A'" />
+    <preprocessor regex="r'(ee)'" value="'I'" />
+    <preprocessor regex="r'(oo)'" value="'U'" />
+    <preprocessor regex="r'(R\^i)'" value="'RRi'" />
+    <preprocessor regex="r'(R\^I)'" value="'RRI'" />
+    <preprocessor regex="r'(oo)'" value="'U'" />
+    <preprocessor regex="r'(w)'" value="'v'" />
+
+	<codemap>
+		<!--Ind vowels-->
+		<!--mapping name="#" code="'#'" prop="unknown"/-->
+		<mapping name="a" code="u'\u0905'" prop="vowel"/>
+		<mapping name="A" code="u'\u0906'" prop="vowel"/>
+		<mapping name="i" code="u'\u0907'" prop="vowel"/>
+		<mapping name="I" code="u'\u0908'" prop="vowel"/>
+		<mapping name="u" code="u'\u0909'" prop="vowel"/>
+		<mapping name="U" code="u'\u090a'" prop="vowel"/>
+		<mapping name="RRi" code="u'\u090b'" prop="vowel"/>
+		<mapping name="RRI" code="u'\u0960'" prop="vowel"/>
+		<mapping name="LLi" code="u'\u090c'" prop="vowel"/>
+		<mapping name="LLI" code="u'\u0961'" prop="vowel"/>
+		<mapping name="e" code="u'\u090f'" prop="vowel"/>
+		<mapping name="E" code="u''" prop="vowel"/>
+		<mapping name="ai" code="u'\u0910'" prop="vowel"/>
+		<mapping name="o" code="u'\u0913'" prop="vowel"/>
+		<mapping name="O" code="u''" prop="vowel"/>
+		<mapping name="au" code="u'\u0914'" prop="vowel"/>
+		<!--Dots  anusvara, visarga, chandra, chandra-bindu, avagraha-->
+		<mapping name=".n" code="u'\u0902'" prop="dot"/>
+		<mapping name="H" code="u'\u0903'" prop="dot"/>
+		<!--mapping name=".c" code="u'\u0945'" prop="dot"/-->
+		<mapping name=".c" code="u'\u090d'" prop="vowel"/>
+		<mapping name=".C" code="u'\u0911'" prop="vowel"/>
+		<mapping name=".N" code="u'\u0901'" prop="dot"/>
+		<mapping name=".a" code="u'\u093d'" prop="dot"/>
+		<!--Halanth, nukta-->
+		<mapping name=".h" code="u'\u094d'"  prop="halanth"/>
+		<mapping name=".x" code="u'\u093c'"  prop="nukta"/>
+		<!--OUM-->
+		<mapping name="oum" code="u'\u0950'"  prop="oum"/>
+		<!--zwj, zwnj-->
+		<mapping name="^" code="u'\u200d'"  prop="zwj"/>
+		<mapping name="^^" code="u'\u200c'"  prop="zwnj"/>		
+		<!--Mathras-->
+		<mapping name="a0" code="u''"  prop="mathra"/>
+		<mapping name="A0" code="u'\u093e'"  prop="mathra"/>
+		<mapping name="i0" code="u'\u093f'" prop="mathra"/>
+		<mapping name="I0" code="u'\u0940'" prop="mathra"/>
+		<mapping name="u0" code="u'\u0941'" prop="mathra"/>
+		<mapping name="U0" code="u'\u0942'" prop="mathra"/>
+		<mapping name="RRi0" code="u'\u0943'" prop="mathra"/>
+		<mapping name="RRI0" code="u'\u0944'" prop="mathra"/>
+		<!--mapping name="LLi0" code="u'\u0962'" prop="mathra"/>
+		<mapping name="LLI0" code="u'\u0963'" prop="mathra"/-->
+		<mapping name=".c0" code="u'\u0945'" prop="mathra"/>
+		<mapping name=".C0" code="u'\u0949'" prop="mathra"/>
+		<mapping name="e0" code="u'\u0947'" prop="mathra"/>
+		<mapping name="E0" code="u''" prop="mathra"/>
+		<mapping name="ai0" code="u'\u0948'" prop="mathra"/>
+		<mapping name="o0" code="u'\u094b'" prop="mathra"/>
+		<mapping name="O0" code="u''" prop="mathra"/>
+		<mapping name="au0" code="u'\u094c'" prop="mathra"/>
+		<!--Consonants-->
+		<mapping name="k" code="u'\u0915'" prop="cons"/>
+		<mapping name="kh" code="u'\u0916'" prop="cons"/>
+		<mapping name="g" code="u'\u0917'" prop="cons"/>
+		<mapping name="gh" code="u'\u0918'" prop="cons"/>
+		<mapping name="~N" code="u'\u0919'" prop="cons"/>
+		<mapping name="ch" code="u'\u091a'" prop="cons"/>
+		<mapping name="chh" code="u'\u091b'" prop="cons"/>
+		<mapping name="j" code="u'\u091c'" prop="cons"/>
+		<mapping name="jh" code="u'\u091d'" prop="cons"/>
+		<mapping name="~n" code="u'\u091e'" prop="cons"/>
+		<mapping name="T" code="u'\u091f'" prop="cons"/>
+		<mapping name="Th" code="u'\u0920'" prop="cons"/>
+		<mapping name="D" code="u'\u0921'" prop="cons"/>
+		<mapping name="Dh" code="u'\u0922'" prop="cons"/>
+		<mapping name="N" code="u'\u0923'" prop="cons"/>
+		<mapping name="t" code="u'\u0924'" prop="cons"/>
+		<mapping name="th" code="u'\u0925'" prop="cons"/>
+		<mapping name="d" code="u'\u0926'" prop="cons"/>
+		<mapping name="dh" code="u'\u0927'" prop="cons"/>
+		<mapping name="n" code="u'\u0928'" prop="cons"/>
+		<mapping name="p" code="u'\u092a'" prop="cons"/>
+		<mapping name="ph" code="u'\u092b'" prop="cons"/>
+		<mapping name="b" code="u'\u092c'" prop="cons"/>
+		<mapping name="bh" code="u'\u092d'" prop="cons"/>
+		<mapping name="m" code="u'\u092e'" prop="cons"/>
+		<mapping name="y" code="u'\u092f'" prop="cons"/>
+		<mapping name="r" code="u'\u0930'" prop="cons"/>
+		<mapping name="l" code="u'\u0932'" prop="cons"/>
+		<mapping name="L" code="u'\u0933'" prop="cons"/>
+		<mapping name="v" code="u'\u0935'" prop="cons"/>
+		<mapping name="sh" code="u'\u0936'" prop="cons"/>
+		<mapping name="Sh" code="u'\u0937'" prop="cons"/>
+		<mapping name="s" code="u'\u0938'" prop="cons"/>
+		<mapping name="h" code="u'\u0939'" prop="cons"/>
+		<!--Consonants extended-->
+		<mapping name="q" code="u'\u0958'"  prop="cons"/>
+		<mapping name="K" code="u'\u0959'" prop="cons"/>
+		<mapping name="G" code="u'\u095a'" prop="cons"/>
+		<mapping name="J" code="u'\u095b'" prop="cons"/>
+		<mapping name=".D" code="u'\u095c'" prop="cons"/>
+		<mapping name="f" code="u'\u095e'" prop="cons"/>
+		<mapping name="x" code="u'\u0915\u094d\u0937'" prop="cons"/>
+		<mapping name="GY" code="u'\u091c\u094d\u091e'" prop="cons"/>
+		<mapping name="R" code="u'\u0931'" prop="cons"/>
+		
+		<mapping name="EPS" code="u'\ue000'" prop="epsilon"/>
+	</codemap>
+	<!--akshara regex='_vowel_|_cons_(_nukta_)?(_halanth_(_zwj_|_zwnj_)?_cons_(_nukta_)?){0,2}(_mathra_)?(_dot_)?'/-->
+	<akshara regex='_vowel__dot_?|_cons_(_nukta_)?(_halanth_(_zwj_|_zwnj_)?_cons_(_nukta_)?){0,3}(_mathra_(_dot_)?|_halanth_(_zwj_|_zwnj_)?$)?'/>
+	<render-rules>
+		<!--rule lit="_#_">
+			<producer regex='(_#_)' replace='_#_'/>
+		</rule-->
+		<rule lit="_a_">
+			<producer regex='(?&lt;=_cons_)(_a_)' replace='_a0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_a_)' replace='_a0_'/>			
+			<producer regex='(_a_)' replace='_a_'/>
+		</rule>		
+		<rule lit="_A_">
+			<producer regex='(?&lt;=_cons_)(_A_)' replace='_A0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_A_)' replace='_A0_'/>			
+			<producer regex='(_A_)' replace='_A_'/>
+		</rule>
+		<rule lit="_i_">
+			<producer regex='(?&lt;=_cons_)(_i_)' replace='_i0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_i_)' replace='_i0_'/>			
+			<producer regex='(_i_)' replace='_i_'/>
+		</rule>
+		<rule lit="_I_">
+			<producer regex='(?&lt;=_cons_)(_I_)' replace='_I0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_I_)' replace='_I0_'/>			
+			<producer regex='(_I_)' replace='_I_'/>
+		</rule>
+		<rule lit="_u_">
+			<producer regex='(?&lt;=_cons_)(_u_)' replace='_u0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_u_)' replace='_u0_'/>			
+			<producer regex='(_u_)' replace='_u_'/>
+		</rule>
+		<rule lit="_U_">
+			<producer regex='(?&lt;=_cons_)(_U_)' replace='_U0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_U_)' replace='_U0_'/>			
+			<producer regex='(_U_)' replace='_U_'/>
+		</rule>
+		<rule lit="_RRi_">
+			<producer regex='(?&lt;=_cons_)(_RRi_)' replace='_RRi0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_RRi_)' replace='_RRi0_'/>			
+			<producer regex='(_RRi_)' replace='_RRi_'/>
+		</rule>
+		<rule lit="_RRI_">
+			<producer regex='(?&lt;=_cons_)(_RRI_)' replace='_RRI0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_RRI_)' replace='_RRI0_'/>			
+			<producer regex='(_RRI_)' replace='_RRI_'/>
+		</rule>
+		<!--rule lit="_LLi_">
+			<producer regex='(?&lt;=_cons_)(_LLi_)' replace='_LLi0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_LLi_)' replace='_LLi0_'/>			
+			<producer regex='(_LLi_)' replace='_LLi_'/>
+		</rule>
+		<rule lit="_LLI_">
+			<producer regex='(?&lt;=_cons_)(_LLI_)' replace='_LLI0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_LLI_)' replace='_LLI0_'/>			
+			<producer regex='(_LLI_)' replace='_LLI_'/>
+		</rule-->
+		<rule lit="_.c_">
+			<producer regex='(?&lt;=_cons_)(_.c_)' replace='_.c0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_.c_)' replace='_.c0_'/>			
+			<producer regex='(_.c_)' replace='_.c_'/>
+		</rule>
+		<rule lit="_.C_">
+			<producer regex='(?&lt;=_cons_)(_.C_)' replace='_.C0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_.C_)' replace='_.C0_'/>			
+			<producer regex='(_.C_)' replace='_.C_'/>
+		</rule>
+		<rule lit="_e_">
+			<producer regex='(?&lt;=_cons_)(_e_)' replace='_e0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_e_)' replace='_e0_'/>			
+			<producer regex='(_e_)' replace='_e_'/>
+		</rule>
+		<rule lit="_E_">
+			<producer regex='(?&lt;=_cons_)(_E_)' replace='_E0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_E_)' replace='_E0_'/>			
+			<producer regex='(_E_)' replace='_E_'/>
+		</rule>
+		<rule lit="_ai_">
+			<producer regex='(?&lt;=_cons_)(_ai_)' replace='_ai0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_ai_)' replace='_ai0_'/>			
+			<producer regex='(_ai_)' replace='_ai_'/>
+		</rule>				
+		<rule lit="_o_">
+			<producer regex='(?&lt;=_cons_)(_o_)' replace='_o0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_o_)' replace='_o0_'/>			
+			<producer regex='(_o_)' replace='_o_'/>
+		</rule>
+		<rule lit="_O_">
+			<producer regex='(?&lt;=_cons_)(_O_)' replace='_O0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_O_)' replace='_O0_'/>			
+			<producer regex='(_O_)' replace='_O_'/>
+		</rule>
+		<rule lit="_au_">
+			<producer regex='(?&lt;=_cons_)(_au_)' replace='_au0_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_au_)' replace='_au0_'/>			
+			<producer regex='(_au_)' replace='_au_'/>
+		</rule>
+		<rule lit="_.n_">
+			<producer regex='(_.n_)' replace='_.n_'/>
+		</rule>
+		<rule lit="_H_">
+			<producer regex='(_H_)' replace='_H_'/>
+		</rule>
+		
+		<rule lit="_.N_">
+			<producer regex='(_.N_)' replace='_.N_'/>
+		</rule>
+		<rule lit="_.a_">
+			<producer regex='(_.a_)' replace='_.a_'/>
+		</rule>
+		<rule lit="_.h_">
+			<producer regex='(_.h_)' replace='_.h_'/>
+		</rule>
+		<rule lit="_.x_">
+			<producer regex='(_.x_)' replace='_.x_'/>
+		</rule>
+		<rule lit="_^_">
+			<producer regex='(_^_)' replace='_^_'/>
+		</rule>
+		<rule lit="_^^_">
+			<producer regex='(_^^_)' replace='_^^_'/>
+		</rule>						
+		<rule lit="_oum_">
+			<producer regex='^(_oum_)$' replace='_oum_'/>
+		</rule>
+		<rule lit="_k_">
+			<producer regex='(?&lt;=_cons_)(_k_)' replace='_.h__k_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_k_)' replace='_.h__k_'/>			
+			<producer regex='(_k_)' replace='_k_'/>
+		</rule>								
+		<rule lit="_kh_">
+			<producer regex='(?&lt;=_cons_)(_kh_)' replace='_.h__kh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_kh_)' replace='_.h__kh_'/>			
+			<producer regex='(_kh_)' replace='_kh_'/>
+		</rule>	
+		<rule lit="_g_">
+			<producer regex='(?&lt;=_cons_)(_g_)' replace='_.h__g_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_g_)' replace='_.h__g_'/>			
+			<producer regex='(_g_)' replace='_g_'/>
+		</rule>
+		<rule lit="_gh_">
+			<producer regex='(?&lt;=_cons_)(_gh_)' replace='_.h__gh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_gh_)' replace='_.h__gh_'/>			
+			<producer regex='(_gh_)' replace='_gh_'/>
+		</rule>
+		<rule lit="_~N_">
+			<producer regex='(?&lt;=_cons_)(_~N_)' replace='_.h__~N_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_~N_)' replace='_.h__~N_'/>			
+			<producer regex='(_~N_)' replace='_~N_'/>
+		</rule>
+		<rule lit="_ch_">
+			<producer regex='(?&lt;=_cons_)(_ch_)' replace='_.h__ch_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_ch_)' replace='_.h__ch_'/>			
+			<producer regex='(_ch_)' replace='_ch_'/>
+		</rule>
+		<rule lit="_chh_">
+			<producer regex='(?&lt;=_cons_)(_chh_)' replace='_.h__chh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_chh_)' replace='_.h__chh_'/>			
+			<producer regex='(_chh_)' replace='_chh_'/>
+		</rule>
+		<rule lit="_j_">
+			<producer regex='(?&lt;=_cons_)(_j_)' replace='_.h__j_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_j_)' replace='_.h__j_'/>			
+			<producer regex='(_j_)' replace='_j_'/>
+		</rule>
+		<rule lit="_jh_">
+			<producer regex='(?&lt;=_cons_)(_jh_)' replace='_.h__jh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_jh_)' replace='_.h__jh_'/>			
+			<producer regex='(_jh_)' replace='_jh_'/>
+		</rule>
+		<rule lit="_~n_">
+			<producer regex='(?&lt;=_cons_)(_~n_)' replace='_.h__~n_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_~n_)' replace='_.h__~n_'/>			
+			<producer regex='(_~n_)' replace='_~n_'/>
+		</rule>
+		<rule lit="_T_">
+			<producer regex='(?&lt;=_cons_)(_T_)' replace='_.h__T_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_T_)' replace='_.h__T_'/>			
+			<producer regex='(_T_)' replace='_T_'/>
+		</rule>
+		<rule lit="_Th_">
+			<producer regex='(?&lt;=_cons_)(_Th_)' replace='_.h__Th_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_Th_)' replace='_.h__Th_'/>			
+			<producer regex='(_Th_)' replace='_Th_'/>
+		</rule>
+		<rule lit="_D_">
+			<producer regex='(?&lt;=_cons_)(_D_)' replace='_.h__D_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_D_)' replace='_.h__D_'/>			
+			<producer regex='(_D_)' replace='_D_'/>
+		</rule>
+		<rule lit="_Dh_">
+			<producer regex='(?&lt;=_cons_)(_Dh_)' replace='_.h__Dh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_Dh_)' replace='_.h__Dh_'/>			
+			<producer regex='(_Dh_)' replace='_Dh_'/>
+		</rule>
+		<rule lit="_N_">
+			<producer regex='(?&lt;=_cons_)(_N_)' replace='_.h__N_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_N_)' replace='_.h__N_'/>			
+			<producer regex='(_N_)' replace='_N_'/>
+		</rule>
+		<rule lit="_t_">
+			<producer regex='(?&lt;=_cons_)(_t_)' replace='_.h__t_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_t_)' replace='_.h__t_'/>			
+			<producer regex='(_t_)' replace='_t_'/>
+		</rule>										
+		<rule lit="_th_">
+			<producer regex='(?&lt;=_cons_)(_th_)' replace='_.h__th_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_th_)' replace='_.h__th_'/>			
+			<producer regex='(_th_)' replace='_th_'/>
+		</rule>
+		<rule lit="_d_">
+			<producer regex='(?&lt;=_cons_)(_d_)' replace='_.h__d_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_d_)' replace='_.h__d_'/>			
+			<producer regex='(_d_)' replace='_d_'/>
+		</rule>
+		<rule lit="_dh_">
+			<producer regex='(?&lt;=_cons_)(_dh_)' replace='_.h__dh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_dh_)' replace='_.h__dh_'/>			
+			<producer regex='(_dh_)' replace='_dh_'/>
+		</rule>
+		<rule lit="_n_">
+			<producer regex='(?&lt;=_cons_)(_n_)' replace='_.h__n_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_n_)' replace='_.h__n_'/>			
+			<producer regex='(_n_)' replace='_n_'/>
+		</rule>
+		<rule lit="_p_">
+			<producer regex='(?&lt;=_cons_)(_p_)' replace='_.h__p_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_p_)' replace='_.h__p_'/>			
+			<producer regex='(_p_)' replace='_p_'/>
+		</rule>									
+		<rule lit="_ph_">
+			<producer regex='(?&lt;=_cons_)(_ph_)' replace='_.h__ph_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_ph_)' replace='_.h__ph_'/>			
+			<producer regex='(_ph_)' replace='_ph_'/>
+		</rule>
+		<rule lit="_b_">
+			<producer regex='(?&lt;=_cons_)(_b_)' replace='_.h__b_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_b_)' replace='_.h__b_'/>			
+			<producer regex='(_b_)' replace='_b_'/>
+		</rule>
+		<rule lit="_bh_">
+			<producer regex='(?&lt;=_cons_)(_bh_)' replace='_.h__bh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_bh_)' replace='_.h__bh_'/>			
+			<producer regex='(_bh_)' replace='_bh_'/>
+		</rule>
+		<rule lit="_m_">
+			<producer regex='(?&lt;=_cons_)(_m_)' replace='_.h__m_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_m_)' replace='_.h__m_'/>			
+			<producer regex='(_m_)' replace='_m_'/>
+		</rule>
+		<rule lit="_y_">
+			<producer regex='(?&lt;=_cons_)(_y_)' replace='_.h__y_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_y_)' replace='_.h__y_'/>			
+			<producer regex='(_y_)' replace='_y_'/>
+		</rule>																					
+		<rule lit="_r_">
+			<producer regex='(?&lt;=_cons_)(_r_)' replace='_.h__r_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_r_)' replace='_.h__r_'/>			
+			<producer regex='(_r_)' replace='_r_'/>
+		</rule>
+		<rule lit="_l_">
+			<producer regex='(?&lt;=_cons_)(_l_)' replace='_.h__l_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_l_)' replace='_.h__l_'/>			
+			<producer regex='(_l_)' replace='_l_'/>
+		</rule>		
+		<rule lit="_L_">
+			<producer regex='(?&lt;=_cons_)(_L_)' replace='_.h__L_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_L_)' replace='_.h__L_'/>			
+			<producer regex='(_L_)' replace='_L_'/>
+		</rule>
+		<rule lit="_v_">
+			<producer regex='(?&lt;=_cons_)(_v_)' replace='_.h__v_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_v_)' replace='_.h__v_'/>			
+			<producer regex='(_v_)' replace='_v_'/>
+		</rule>
+		<rule lit="_sh_">
+			<producer regex='(?&lt;=_cons_)(_sh_)' replace='_.h__sh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_sh_)' replace='_.h__sh_'/>			
+			<producer regex='(_sh_)' replace='_sh_'/>
+		</rule>
+		<rule lit="_Sh_">
+			<producer regex='(?&lt;=_cons_)(_Sh_)' replace='_.h__Sh_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_Sh_)' replace='_.h__Sh_'/>			
+			<producer regex='(_Sh_)' replace='_Sh_'/>
+		</rule>
+		<rule lit="_s_">
+			<producer regex='(?&lt;=_cons_)(_s_)' replace='_.h__s_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_s_)' replace='_.h__s_'/>			
+			<producer regex='(_s_)' replace='_s_'/>
+		</rule>
+		<rule lit="_h_">
+			<producer regex='(?&lt;=_cons_)(_h_)' replace='_.h__h_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_h_)' replace='_.h__h_'/>			
+			<producer regex='(_h_)' replace='_h_'/>
+		</rule>
+		<rule lit="_q_">
+			<producer regex='(?&lt;=_cons_)(_q_)' replace='_.h__q_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_q_)' replace='_.h__q_'/>			
+			<producer regex='(_q_)' replace='_q_'/>
+		</rule>
+		<rule lit="_K_">
+			<producer regex='(?&lt;=_cons_)(_K_)' replace='_.h__K_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_K_)' replace='_.h__K_'/>			
+			<producer regex='(_K_)' replace='_K_'/>
+		</rule>
+		<rule lit="_G_">
+			<producer regex='(?&lt;=_cons_)(_G_)' replace='_.h__G_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_G_)' replace='_.h__G_'/>			
+			<producer regex='(_G_)' replace='_G_'/>
+		</rule>
+		<rule lit="_J_">
+			<producer regex='(?&lt;=_cons_)(_J_)' replace='_.h__J_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_J_)' replace='_.h__J_'/>			
+			<producer regex='(_J_)' replace='_J_'/>
+		</rule>
+		<rule lit="_.D_">
+			<producer regex='(?&lt;=_cons_)(_.D_)' replace='_.h__.D_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_.D_)' replace='_.h__.D_'/>			
+			<producer regex='(_.D_)' replace='_.D_'/>
+		</rule>
+		<rule lit="_f_">
+			<producer regex='(?&lt;=_cons_)(_f_)' replace='_.h__f_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_f_)' replace='_.h__f_'/>			
+			<producer regex='(_f_)' replace='_f_'/>
+		</rule>
+		<rule lit="_x_">
+			<producer regex='(?&lt;=_cons_)(_x_)' replace='_.h__x_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_x_)' replace='_.h__x_'/>			
+			<producer regex='(_x_)' replace='_x_'/>
+		</rule>
+		<rule lit="_GY_">
+			<producer regex='(?&lt;=_cons_)(_GY_)' replace='_.h__GY_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_GY_)' replace='_.h__GY_'/>			
+			<producer regex='(_GY_)' replace='_GY_'/>
+		</rule>
+		<rule lit="_R_">
+			<producer regex='(?&lt;=_cons_)(_R_)' replace='_.h__R_'/>
+			<producer regex='(?&lt;=_cons__nukta_)(_R_)' replace='_.h__R_'/>			
+			<producer regex='(_R_)' replace='_R_'/>
+		</rule>
+	</render-rules>
+	<utolit-rules>
+		<rule unicode="_a_">
+			<producer regex='(_a_)' replace="['a']"/>
+		</rule>		
+		<rule unicode="_A_">
+			<producer regex='(_A_)' replace="['A']"/>
+		</rule>
+		<rule unicode="_i_">
+			<producer regex='(?&lt;=_cons_)(_i_)' replace="['^^','i']"/> #which means, implicit vowel a,i could be conflicting with (ai)
+			<producer regex='(_i_)' replace="['i']"/>
+		</rule>
+		<rule unicode="_I_">
+			<producer regex='(_I_)' replace="['I']"/>
+		</rule>
+		<rule unicode="_u_">
+			<producer regex='(?&lt;=_cons_)(_u_)' replace="['^^','u']"/> #which means,implicit vowel a,u could be conflicting with (au)
+			<producer regex='(_u_)' replace="['u']"/>
+		</rule>
+		<rule unicode="_U_">
+			<producer regex='(_U_)' replace="['U']"/>
+		</rule>
+		<rule unicode="_RRi_">
+			<producer regex='(_RRi_)' replace="['RRi']"/>
+		</rule>
+		<rule unicode="_RRI_">
+			<producer regex='(_RRI_)' replace="['RRI']"/>
+		</rule>
+		<!--rule unicode="_LLi_">
+			<producer regex='(_LLi_)' replace="['LLi']"/>
+		</rule>
+		<rule unicode="_LLI_">
+			<producer regex='(_LLI_)' replace="['LLI']"/>
+		</rule-->
+		<rule unicode="_e_">
+			<producer regex='(_e_)' replace="['e']"/>
+		</rule>
+		<rule unicode="_E_">
+			<producer regex='(_E_)' replace="['E']"/>
+		</rule>
+		<rule unicode="_ai_">
+			<producer regex='(_ai_)' replace="['ai']"/>
+		</rule>				
+		<rule unicode="_o_">
+			<producer regex='(_o_)' replace="['o']"/>
+		</rule>
+		<rule unicode="_O_">
+			<producer regex='(_O_)' replace="['O']"/>
+		</rule>
+		<rule unicode="_au_">
+			<producer regex='(_au_)' replace="['au']"/>
+		</rule>
+		<rule unicode="_.n_">
+			<producer regex='(_.n_)' replace="['.n']"/>
+		</rule>
+		<rule unicode="_H_">
+			<producer regex='(_H_)' replace="['H']"/>
+		</rule>
+		<rule unicode="_.c_">
+			<producer regex='(_.c_)' replace="['.c']"/>
+		</rule>
+		<rule unicode="_.C_">
+			<producer regex='(_.C_)' replace="['.C']"/>
+		</rule>		
+		<rule unicode="_.N_">
+			<producer regex='(_.N_)' replace="['.N']"/>
+		</rule>
+		<rule unicode="_.a_">
+			<producer regex='(_.a_)' replace="['.a']"/>
+		</rule>
+		<rule unicode="_.h_">
+			<producer regex='(_.h_)(?!_cons_)' replace="['.h']"/>
+			<producer regex='(_.h_)(?=_h_)' replace="['.h']"/>
+			<producer regex='(_.h_)' replace="['EPS']"/>
+		</rule>
+		<rule unicode="_.x_">
+			<producer regex='_cons_(_.x_)(?=_cons_|_dot_|_vowel_)' replace="['.x','a0']"/>
+			<producer regex='(_.x_)' replace="['.x']"/>
+		</rule>				
+		<rule unicode="_^_">
+			<producer regex='(_^_)' replace="['^']"/>
+		</rule>
+		<rule unicode="_^^_">
+			<producer regex='(_^^_)' replace="['^^']"/>
+		</rule>						
+		<rule unicode="_oum_">
+			<producer regex='^(_oum_)$' replace="['oum']"/>
+		</rule>
+		<rule unicode="_k_">
+			<producer regex='(_k_)(?=_cons_|_dot_|_vowel_)' replace="['k','a0']"/>
+			<producer regex='^(_k_)$' replace="['k','a0']"/>
+			<producer regex='(_k_)' replace="['k']"/>
+		</rule>								
+		<rule unicode="_kh_">
+			<producer regex='(_kh_)(?=_cons_|_dot_|_vowel_)' replace="['kh','a0']"/>
+			<producer regex='^(_kh_)$' replace="['kh','a0']"/>
+			<producer regex='(_kh_)' replace="['kh']"/>
+		</rule>	
+		<rule unicode="_g_">
+			<producer regex='(_g_)(?=_cons_|_dot_|_vowel_)' replace="['g','a0']"/>
+			<producer regex='^(_g_)$' replace="['g','a0']"/>
+			<producer regex='(_g_)' replace="['g']"/>
+		</rule>
+		<rule unicode="_gh_">
+			<producer regex='(_gh_)(?=_cons_|_dot_|_vowel_)' replace="['gh','a0']"/>
+			<producer regex='^(_gh_)$' replace="['gh','a0']"/>
+			<producer regex='(_gh_)' replace="['gh']"/>
+		</rule>
+		<rule unicode="_~N_">
+			<producer regex='(_~N_)(?=_cons_|_dot_|_vowel_)' replace="['~N','a0']"/>
+			<producer regex='^(_~N_)$' replace="['~N','a0']"/>
+			<producer regex='(_~N_)' replace="['~N']"/>
+		</rule>
+		<rule unicode="_ch_">
+			<producer regex='(_ch_)(?=_cons_|_dot_|_vowel_)' replace="['ch','a0']"/>
+			<producer regex='^(_ch_)$' replace="['ch','a0']"/>
+			<producer regex='(_ch_)' replace="['ch']"/>
+		</rule>
+		<rule unicode="_chh_">
+			<producer regex='(_chh_)(?=_cons_|_dot_|_vowel_)' replace="['chh','a0']"/>
+			<producer regex='^(_chh_)$' replace="['chh','a0']"/>
+			<producer regex='(_chh_)' replace="['chh']"/>
+		</rule>
+		<rule unicode="_j_">
+			<producer regex='(_j_)(?=_cons_|_dot_|_vowel_)' replace="['j','a0']"/>
+			<producer regex='^(_j_)$' replace="['j','a0']"/>
+			<producer regex='(_j_)' replace="['j']"/>
+		</rule>
+		<rule unicode="_jh_">
+			<producer regex='(_jh_)(?=_cons_|_dot_|_vowel_)' replace="['jh','a0']"/>
+			<producer regex='^(_jh_)$' replace="['jh','a0']"/>
+			<producer regex='(_jh_)' replace="['jh']"/>
+		</rule>
+		<rule unicode="_~n_">
+			<producer regex='(_~n_)(?=_cons_|_dot_|_vowel_)' replace="['~n','a0']"/>
+			<producer regex='^(_~n_)$' replace="['~n','a0']"/>
+			<producer regex='(_~n_)' replace="['~n']"/>
+		</rule>
+		<rule unicode="_T_">
+			<producer regex='(_T_)(?=_cons_|_dot_|_vowel_)' replace="['T','a0']"/>
+			<producer regex='^(_T_)$' replace="['T','a0']"/>
+			<producer regex='(_T_)' replace="['T']"/>
+		</rule>
+		<rule unicode="_Th_">
+			<producer regex='(_Th_)(?=_cons_|_dot_|_vowel_)' replace="['Th','a0']"/>
+			<producer regex='^(_Th_)$' replace="['Th','a0']"/>
+			<producer regex='(_Th_)' replace="['Th']"/>
+		</rule>
+		<rule unicode="_D_">
+			<producer regex='(_D_)(?=_cons_|_dot_|_vowel_)' replace="['D','a0']"/>
+			<producer regex='^(_D_)$' replace="['D','a0']"/>
+			<producer regex='(_D_)' replace="['D']"/>
+		</rule>
+		<rule unicode="_Dh_">
+			<producer regex='(_Dh_)(?=_cons_|_dot_|_vowel_)' replace="['Dh','a0']"/>
+			<producer regex='^(_Dh_)$' replace="['Dh','a0']"/>
+			<producer regex='(_Dh_)' replace="['Dh']"/>
+		</rule>
+		<rule unicode="_N_">
+			<producer regex='(_N_)(?=_cons_|_dot_|_vowel_)' replace="['N','a0']"/>
+			<producer regex='^(_N_)$' replace="['N','a0']"/>
+			<producer regex='(_N_)' replace="['N']"/>
+		</rule>
+		<rule unicode="_t_">
+			<producer regex='(_t_)(?=_cons_|_dot_|_vowel_)' replace="['t','a0']"/>
+			<producer regex='^(_t_)$' replace="['t','a0']"/>
+			<producer regex='(_t_)' replace="['t']"/>
+		</rule>										
+		<rule unicode="_th_">
+			<producer regex='(_th_)(?=_cons_|_dot_|_vowel_)' replace="['th','a0']"/>
+			<producer regex='^(_th_)$' replace="['th','a0']"/>
+			<producer regex='(_th_)' replace="['th']"/>
+		</rule>
+		<rule unicode="_d_">
+			<producer regex='(_d_)(?=_cons_|_dot_|_vowel_)' replace="['d','a0']"/>
+			<producer regex='^(_d_)$' replace="['d','a0']"/>
+			<producer regex='(_d_)' replace="['d']"/>
+		</rule>
+		<rule unicode="_dh_">
+			<producer regex='(_dh_)(?=_cons_|_dot_|_vowel_)' replace="['dh','a0']"/>
+			<producer regex='^(_dh_)$' replace="['dh','a0']"/>
+			<producer regex='(_dh_)' replace="['dh']"/>
+		</rule>
+		<rule unicode="_n_">
+			<producer regex='(_n_)(?=_cons_|_dot_|_vowel_)' replace="['n','a0']"/>
+			<producer regex='^(_n_)$' replace="['n','a0']"/>
+			<producer regex='(_n_)' replace="['n']"/>
+		</rule>
+		<rule unicode="_p_">
+			<producer regex='(_p_)(?=_cons_|_dot_|_vowel_)' replace="['p','a0']"/>
+			<producer regex='^(_p_)$' replace="['p','a0']"/>
+			<producer regex='(_p_)' replace="['p']"/>
+		</rule>									
+		<rule unicode="_ph_">
+			<producer regex='(_ph_)(?=_cons_|_dot_|_vowel_)' replace="['ph','a0']"/>
+			<producer regex='^(_ph_)$' replace="['ph','a0']"/>
+			<producer regex='(_ph_)' replace="['ph']"/>
+		</rule>
+		<rule unicode="_b_">
+			<producer regex='(_b_)(?=_cons_|_dot_|_vowel_)' replace="['b','a0']"/>
+			<producer regex='^(_b_)$' replace="['b','a0']"/>
+			<producer regex='(_b_)' replace="['b']"/>
+		</rule>
+		<rule unicode="_bh_">
+			<producer regex='(_bh_)(?=_cons_|_dot_|_vowel_)' replace="['bh','a0']"/>
+			<producer regex='^(_bh_)$' replace="['bh','a0']"/>
+			<producer regex='(_bh_)' replace="['bh']"/>
+		</rule>
+		<rule unicode="_m_">
+			<producer regex='(_m_)(?=_cons_|_dot_|_vowel_)' replace="['m','a0']"/>
+			<producer regex='^(_m_)$' replace="['m','a0']"/>
+			<producer regex='(_m_)' replace="['m']"/>
+		</rule>
+		<rule unicode="_y_">
+			<producer regex='(_y_)(?=_cons_|_dot_|_vowel_)' replace="['y','a0']"/>
+			<producer regex='^(_y_)$' replace="['y','a0']"/>
+			<producer regex='(_y_)' replace="['y']"/>
+		</rule>																					
+		<rule unicode="_r_">
+			<producer regex='(_r_)(?=_cons_|_dot_|_vowel_)' replace="['r','a0']"/>
+			<producer regex='^(_r_)$' replace="['r','a0']"/>
+			<producer regex='(_r_)' replace="['r']"/>
+		</rule>
+		<rule unicode="_l_">
+			<producer regex='(_l_)(?=_cons_|_dot_|_vowel_)' replace="['l','a0']"/>
+			<producer regex='^(_l_)$' replace="['l','a0']"/>
+			<producer regex='(_l_)' replace="['l']"/>
+		</rule>		
+		<rule unicode="_L_">
+			<producer regex='(_L_)(?=_cons_|_dot_|_vowel_)' replace="['L','a0']"/>
+			<producer regex='^(_L_)$' replace="['L','a0']"/>
+			<producer regex='(_L_)' replace="['L']"/>
+		</rule>
+		<rule unicode="_v_">
+			<producer regex='(_v_)(?=_cons_|_dot_|_vowel_)' replace="['v','a0']"/>
+			<producer regex='^(_v_)$' replace="['v','a0']"/>
+			<producer regex='(_v_)' replace="['v']"/>
+		</rule>
+		<rule unicode="_sh_">
+			<producer regex='(_sh_)(?=_cons_|_dot_|_vowel_)' replace="['sh','a0']"/>
+			<producer regex='^(_sh_)$' replace="['sh','a0']"/>
+			<producer regex='(_sh_)' replace="['sh']"/>
+		</rule>
+		<rule unicode="_Sh_">
+			<producer regex='(_Sh_)(?=_cons_|_dot_|_vowel_)' replace="['Sh','a0']"/>
+			<producer regex='^(_Sh_)$' replace="['Sh','a0']"/>
+			<producer regex='(_Sh_)' replace="['Sh']"/>
+		</rule>
+		<rule unicode="_s_">
+			<producer regex='(_s_)(?=_cons_|_dot_|_vowel_)' replace="['s','a0']"/>
+			<producer regex='^(_s_)$' replace="['s','a0']"/>
+			<producer regex='(_s_)' replace="['s']"/>
+		</rule>
+		<rule unicode="_h_">
+			<producer regex='(_h_)(?=_cons_|_dot_|_vowel_)' replace="['h','a0']"/>
+			<producer regex='^(_h_)$' replace="['h','a0']"/>
+			<producer regex='(_h_)' replace="['h']"/>
+		</rule>
+		<rule unicode="_q_">
+			<producer regex='(_q_)(?=_cons_|_dot_|_vowel_)' replace="['q','a0']"/>
+			<producer regex='^(_q_)$' replace="['q','a0']"/>
+			<producer regex='(_q_)' replace="['q']"/>
+		</rule>
+		<rule unicode="_K_">
+			<producer regex='(_K_)(?=_cons_|_dot_|_vowel_)' replace="['K','a0']"/>
+			<producer regex='^(_K_)$' replace="['K','a0']"/>
+			<producer regex='(_K_)' replace="['K']"/>
+		</rule>
+		<rule unicode="_G_">
+			<producer regex='(_G_)(?=_cons_|_dot_|_vowel_)' replace="['G','a0']"/>
+			<producer regex='^(_G_)$' replace="['G','a0']"/>
+			<producer regex='(_G_)' replace="['G']"/>
+		</rule>
+		<rule unicode="_J_">
+			<producer regex='(_J_)(?=_cons_|_dot_|_vowel_)' replace="['J','a0']"/>
+			<producer regex='^(_J_)$' replace="['J','a0']"/>
+			<producer regex='(_J_)' replace="['J']"/>
+		</rule>
+		<rule unicode="_.D_">
+			<producer regex='(_.D_)(?=_cons_|_dot_|_vowel_)' replace="['.D','a0']"/>
+			<producer regex='^(_.D_)$' replace="['.D','a0']"/>
+			<producer regex='(_.D_)' replace="['.D']"/>
+		</rule>
+		<rule unicode="_f_">
+			<producer regex='(_f_)(?=_cons_|_dot_|_vowel_)' replace="['f','a0']"/>
+			<producer regex='^(_f_)$' replace="['f','a0']"/>
+			<producer regex='(_f_)' replace="['f']"/>
+		</rule>
+		<rule unicode="_x_">
+			<producer regex='(_x_)(?=_cons_|_dot_|_vowel_)' replace="['x','a0']"/>
+			<producer regex='^(_x_)$' replace="['x','a0']"/>
+			<producer regex='(_x_)' replace="['x']"/>
+		</rule>
+		<rule unicode="_GY_">
+			<producer regex='(_GY_)(?=_cons_|_dot_|_vowel_)' replace="['GY','a0']"/>
+			<producer regex='^(_GY_)$' replace="['GY','a0']"/>
+			<producer regex='(_GY_)' replace="['GY']"/>
+		</rule>
+		<rule unicode="_R_">
+			<producer regex='(_R_)(?=_cons_|_dot_|_vowel_)' replace="['R','a0']"/>
+			<producer regex='^(_R_)$' replace="['R','a0']"/>
+			<producer regex='(_R_)' replace="['R']"/>
+		</rule>
+		<rule unicode="_A0_">
+			<producer regex='(_A0_)' replace="['A0']"/>
+		</rule>
+		<rule unicode="_i0_">
+			<producer regex='(_i0_)' replace="['i0']"/>
+		</rule>
+		<rule unicode="_I0_">
+			<producer regex='(_I0_)' replace="['I0']"/>
+		</rule>
+		<rule unicode="_u0_">
+			<producer regex='(_u0_)' replace="['u0']"/>
+		</rule>
+		<rule unicode="_U0_">
+			<producer regex='(_U0_)' replace="['U0']"/>
+		</rule>
+		<rule unicode="_RRi0_">
+			<producer regex='(_RRi0_)' replace="['RRi0']"/>
+		</rule>
+		<rule unicode="_RRI0_">
+			<producer regex='(_RRI0_)' replace="['RRI0']"/>
+		</rule>
+		<!--rule unicode="_LLi0_">
+			<producer regex='(_LLi0_)' replace="['LLi0']"/>
+		</rule>
+		<rule unicode="_LLI0_">
+			<producer regex='(_LLI0_)' replace="['LLI0']"/>
+		</rule-->
+		<rule unicode="_e0_">
+			<producer regex='(_e0_)' replace="['e0']"/>
+		</rule>
+		<rule unicode="_E0_">
+			<producer regex='(_E0_)' replace="['E0']"/>
+		</rule>
+		<rule unicode="_ai0_">
+			<producer regex='(_ai0_)' replace="['ai0']"/>
+		</rule>				
+		<rule unicode="_o0_">
+			<producer regex='(_o0_)' replace="['o0']"/>
+		</rule>
+		<rule unicode="_O0_">
+			<producer regex='(_O0_)' replace="['O0']"/>
+		</rule>
+		<rule unicode="_au0_">
+			<producer regex='(_au0_)' replace="['au0']"/>
+		</rule>
+	</utolit-rules>
+
+	<helper-groups>
+		<!--helper key='#' regex="(#)" options="['#']"/-->
+		<helper key='a' regex="(a)" options="['a','A','.c']"/>
+		<helper key='i' regex="(i)" options="['i','I']"/>
+		<helper key='ee' regex="(ee)" options="['I','ee']"/>
+		<helper key='u' regex="(u)" options="['u','U']"/>
+		<helper key='ri' regex="(ri)" options="['ri','rI','RRi','RRI']"/>
+		<helper key='ru' regex="(ru)" options="['ru','rU','RRi','RRI']"/>
+		<helper key='e' regex="(e)" options="['e']"/>
+		<helper key='ai' regex="(ai)" options="['ai','aI','Ai','AI']"/>
+		<helper key='oo' regex="(oo)" options="['U','oo']"/>
+		<helper key='o' regex="(o)" options="['o','.C']"/>		
+		<helper key='au' regex="(au)" options="['au']"/>
+		<!--Dots  anusvara, visarga, chandra, chandra-bindu, avagraha-->
+		<helper key='.n' regex="(.n)" options="['.n','.N']"/>
+		<!--helper key='.c' regex="(.c)" options="['.c','.N']"/-->
+		<!--Halanth, nukta-->
+		<!--OUM-->
+		<helper key='oum' regex="^(oum)$" options="['oum']"/>
+		<!--zwj, zwnj-->
+		<!--Consonants-->
+		<helper key='k' regex="(k)" options="['k','q']"/>
+		<helper key='kh' regex="(kh)" options="['kh','K']"/>
+		<helper key='g' regex="(g)" options="['g','G']"/>
+		<helper key='gh' regex="(gh)" options="['gh','G']"/>
+		<helper key='~n' regex="(~n)" options="['~N','~n']"/>
+
+		<helper key='ch' regex="(ch)" options="['ch','chh']"/>
+		<helper key='chh' regex="(chh)" options="['chh']"/>
+		<helper key='j' regex="(j)" options="['j','J']"/>
+		<helper key='z' regex="(z)" options="['J']"/>
+		<helper key='jh' regex="(jh)" options="['jh']"/>
+		<helper key='zh' regex="(zh)" options="['jh']"/>
+
+		<helper key='t' regex="(t)" options="['T','t']"/>
+		<helper key='th' regex="(th)" options="['Th','th']"/>
+		<helper key='d' regex="(d)" options="['D','d','.D']"/>
+		<helper key='dh' regex="(dh)" options="['Dh','dh']"/>
+		<helper key='n' regex="(n)" options="['N','n']"/>
+		
+		<helper key='p' regex="(p)" options="['p']"/>
+		<helper key='ph' regex="(ph)" options="['ph','f']"/>
+		<helper key='f' regex="(ph)" options="['ph','f']"/>
+		<helper key='b' regex="(b)" options="['b']"/>
+		<helper key='bh' regex="(bh)" options="['bh']"/>
+		<helper key='m' regex="(m)" options="['m']"/>
+
+		<helper key='yi' regex="(yi)" options="['yi','yI','i','I']"/>
+		<helper key='ye' regex="(ye)" options="['ye','e']"/>		
+		<helper key='y' regex="(y)" options="['y']"/>
+		<helper key='r' regex="(r)" options="['r','R']"/>
+		<helper key='l' regex="(l)" options="['l','L']"/>
+		<helper key='vu' regex="(vu)" options="['vu','vU','u','U']"/>
+		<helper key='vo' regex="(vo)" options="['vo','vO','o','O']"/>
+		<helper key='v' regex="(v)" options="['v']"/>
+		<helper key='sh' regex="(sh)" options="['sh','Sh']"/>
+		<helper key='s' regex="(s)" options="['s']"/>
+		<helper key='h' regex="(h)" options="['h']"/>
+		<helper key='x' regex="(x)" options="['x']"/>
+	
+	</helper-groups>	
+
+</Quill-Primary>
