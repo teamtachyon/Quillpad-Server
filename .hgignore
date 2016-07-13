@@ -1,0 +1,22 @@
+syntax: glob
+
+*.pyc
+*.txt
+*.so
+*.pyd
+cherrypy/*
+bengali/*.xml
+gujarati/*.xml
+hindi/*.xml
+hindiMobile/*.xml
+kannada/*.xml
+malayalam/*.xml
+marathi/*.xml
+nepali/*.xml
+punjabi/*.xml
+tamil/*.xml
+telugu/*.xml
+EnglishPronouncingTrees/*
+IndianPronouncingTrees/*
+logs/*
+dump/*
