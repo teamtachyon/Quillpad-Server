@@ -264,7 +264,7 @@ class QuillSourceProcessor(object):
                 "options": [inString],
                 "optmap": {inString: inString.split()}
                 })
-            return
+            return response
 
         convertedList, numOptions = engine.literalToUnicode(inString, 
                 "predictive", True)
