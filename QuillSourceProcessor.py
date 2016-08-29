@@ -128,7 +128,7 @@ class QuillSourceProcessor(object):
         words = open(fname).read().split()
         self.engWords = dict([(w, None) for w in words])
         
-         "Loaded english dictionary from...", fname
+        print ("Loaded english dictionary from...", fname)
 
     def makeClashMap(self, fname):
         words = open(fname).read().split()
