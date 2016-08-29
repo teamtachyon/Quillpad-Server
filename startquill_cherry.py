@@ -494,7 +494,7 @@ def connect(thread_index=None):
         logger.error(str(e))
 
 # Tell CherryPy to call "connect" for each thread, when it starts up
-cherrypy.engine.subscribe.('start_thread', connect)
+cherrypy.engine.subscribe('start_thread', connect)
 
 def tupleToStrList(ustrList):
     return [x[0] for x in ustrList[1] ]
