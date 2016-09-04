@@ -41,10 +41,13 @@ building a predictive language input technology.
 Quillpad has been rated as the best by many organisations that have embraced Quillpad.</p>
 </blockquote>
 
-<p>### Version
-   1.0.1</p>
+<h3>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h3>
 
-<p>### Preparation</p>
+<p>1.0.1</p>
+
+<h3>
+<a id="preparation" class="anchor" href="#preparation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Preparation</h3>
 
 <p>There are several archive files in the repository which have to be extracted, these include trained transliteration models and additional text files necessary for the Quillpad Server</p>
 
@@ -67,6 +70,8 @@ Quillpad has been rated as the best by many organisations that have embraced Qui
 <p>unique_word_files.zip</p>
 
 <p>Kindly extract all of these archives into the repository folder itself.</p>
+</li>
+</ul>
 
 <h3>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
@@ -75,18 +80,18 @@ Quillpad has been rated as the best by many organisations that have embraced Qui
 
 <p>First, we need to compile the Quillpad Model loader that will be used to load the trained transliteration models</p>
 
-<div class="highlight highlight-source-shell"><pre>$ <span class="pl-c1">cd</span> Python<span class="pl-cce">\ </span>Cart/python
-$ python setup.py build_ext --inplace
-$ cp QuillCCart.so ../../
-$ <span class="pl-c1">cd</span> ../../</pre></div>
+<div class="highlight highlight-source-shell"><pre>   $ <span class="pl-c1">cd</span> Python<span class="pl-cce">\ </span>Cart/python
+   $ python setup.py build_ext --inplace
+   $ cp QuillCCart.so ../../
+   $ <span class="pl-c1">cd</span> ../../</pre></div>
 
 <p>Now, the Quillpad Server is ready to run</p>
 
-<div class="highlight highlight-source-shell"><pre>$ python startquill_cherry.py</pre></div>
+<div class="highlight highlight-source-shell"><pre>   $ python startquill_cherry.py</pre></div>
 
-<h3>
-<a id="additional-information" class="anchor" href="#additional-information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional Information</h3>
-</li>
+<p>### Additional Information</p>
+
+<ul>
 <li><p>Quillpad runs on port number 8090 (Additional configuration parameters are in <em>quill_cherry8088.conf</em>)</p></li>
 <li>
 <p><em>processWordJSON</em> and <em>processWord</em> are the API endpoints over which the transliteration server can be accessed.</p>
