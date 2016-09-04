@@ -1,3 +1,5 @@
+### **For all further updates/language fixes please visit the fork by [Cognirel](https://github.com/CognirelTech/Quillpad-Server). The original maintainers of Quillpad are maintaining the code there.**
+
 # Quillpad Transliteration Server
 
    Quillpad is an indic language input technology that revolutionized the Indian language typing scene. It is one of the most popular Indic input technologies with more than a billion words typed on the website alone.
