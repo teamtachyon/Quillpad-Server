@@ -1,4 +1,4 @@
-### **For all further updates/language fixes please visit the fork by [Cognirel](https://github.com/CognirelTech/Quillpad-Server). The original maintainers of Quillpad are maintaining the code there.**
+### **For all further updates/language fixes please visit the fork by [Cognirel - https://cognireltech.github.io/Quillpad-Server/](https://cognireltech.github.io/Quillpad-Server/). The original maintainers of Quillpad are maintaining the code there.**
 
 # Quillpad Transliteration Server
 
@@ -8,10 +8,10 @@
    > building a predictive language input technology. 
    > Quillpad has been rated as the best by many organisations that have embraced Quillpad.
 
-   ### Version
+### Version
    1.0.1
 
-   ### Preparation
+### Preparation
 
    There are several archive files in the repository which have to be extracted, these include trained transliteration models and additional text files necessary for the Quillpad Server
 
@@ -33,7 +33,7 @@
 
    Kindly extract all of these archives into the repository folder itself.
 
-   ### Installation
+### Installation
 
    Quillpad Server requires [Python 2.7](https://www.python.org/downloads/) to run.
 
@@ -52,7 +52,7 @@
    $ python startquill_cherry.py
    ```
 
-   ### Additional Information
+### Additional Information
 
    * Quillpad runs on port number 8090 (Additional configuration parameters are in *quill_cherry8088.conf*)
 
@@ -62,6 +62,6 @@
       * localhost:8090/processWordJSON?inString=hello&lang=hindi
       * localhost:8090/processWordJSON?inString=hello&lang=kannada
 
-   ### Development
+### Development
 
    Additional Quillpad Documentation coming soon. Thanks for your patience.
