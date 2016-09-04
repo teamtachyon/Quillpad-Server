@@ -21,3 +21,4 @@ dump/*
 *.zip
 *.bz2
 *.gz
+Python Cart/python/build/
