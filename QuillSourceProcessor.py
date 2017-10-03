@@ -63,20 +63,20 @@ class QuillSourceProcessor(object):
         
         self.scriptEngines = {'english':None,
                 'bengali':qlang.QuillLanguage(bengaliDefFile,bengaliKnowledgeInput,useCCart),
-                #'gujarati':qlang.QuillLanguage(gujaratiDefFile,gujaratiKnowledgeInput,useCCart),
-                #'hindi':qlang.QuillLanguage(hindiDefFile,hindiKnowledgeInput,useCCart),
+                'gujarati':qlang.QuillLanguage(gujaratiDefFile,gujaratiKnowledgeInput,useCCart),
+                'hindi':qlang.QuillLanguage(hindiDefFile,hindiKnowledgeInput,useCCart),
                 #'hindiMobile':qlang.QuillLanguage(hindiMobileDefFile,hindiMobileKnowledgeInput,useCCart),
-                #'kannada':qlang.QuillLanguage(kannadaDefFile,kannadaKnowledgeInput,useCCart),
+                'kannada':qlang.QuillLanguage(kannadaDefFile,kannadaKnowledgeInput,useCCart),
                 #'kannadaMobile':qlang.QuillLanguage(kannadaMobileDefFile,kannadaMobileKnowledgeInput,useCCart),
-                #'malayalam':qlang.QuillLanguage(malayalamDefFile,malayalamKnowledgeInput,useCCart),
+                'malayalam':qlang.QuillLanguage(malayalamDefFile,malayalamKnowledgeInput,useCCart),
                 #'malayalamMobile':qlang.QuillLanguage(malayalamMobileDefFile,malayalamMobileKnowledgeInput,useCCart),
-                #'marathi':qlang.QuillLanguage(marathiDefFile,marathiKnowledgeInput,useCCart),
+                'marathi':qlang.QuillLanguage(marathiDefFile,marathiKnowledgeInput,useCCart),
                 #'marathiMobile':qlang.QuillLanguage(marathiMobileDefFile,marathiMobileKnowledgeInput,useCCart),
-                #'nepali':qlang.QuillLanguage(nepaliDefFile,nepaliKnowledgeInput,useCCart),
-                #'punjabi':qlang.QuillLanguage(punjabiDefFile,punjabiKnowledgeInput,useCCart),
-                #'tamil':qlang.QuillLanguage(tamilDefFile,tamilKnowledgeInput,useCCart),
+                'nepali':qlang.QuillLanguage(nepaliDefFile,nepaliKnowledgeInput,useCCart),
+                'punjabi':qlang.QuillLanguage(punjabiDefFile,punjabiKnowledgeInput,useCCart),
+                'tamil':qlang.QuillLanguage(tamilDefFile,tamilKnowledgeInput,useCCart),
                 #'tamilMobile':qlang.QuillLanguage(tamilMobileDefFile,tamilMobileKnowledgeInput,useCCart),
-                #'telugu':qlang.QuillLanguage(teluguDefFile,teluguKnowledgeInput,useCCart),
+                'telugu':qlang.QuillLanguage(teluguDefFile,teluguKnowledgeInput,useCCart),
                 #'teluguMobile':qlang.QuillLanguage(teluguMobileDefFile,teluguMobileKnowledgeInput,useCCart)
         }
 
@@ -269,7 +269,16 @@ class QuillSourceProcessor(object):
         convertedList, numOptions = engine.literalToUnicode(inString, 
                 "predictive", True)
 
-        options = ["".join(litList) for litList in convertedList]
+        options = []
+        optmap = {}
+        for litList in convertedList:
+            if type(litList[0]) == tuple:
+                options.append("".join([l[0] for l in litList]))
+                optmap["".join([l[0] for l in litList])] = [l[0] for l in litList]
+            else:
+                options.append("".join(litList))
+                optmap["".join(litList)] = litList
+        # options = ["".join([l[0] for l in litList]) for litList in convertedList]
 
         def dictSort(dlang, arr):
             a1 = []
@@ -319,7 +328,7 @@ class QuillSourceProcessor(object):
         response["twords"].append({ 
             "word": True, 
             "options": options,
-            "optmap": dict(map(lambda x: ("".join(x), x), convertedList))
+            "optmap": optmap
             })
 
         return response
