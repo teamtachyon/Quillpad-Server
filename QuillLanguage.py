@@ -117,7 +117,7 @@ class QuillLanguage(object):
                     for eachOption in options:
                         temp = copy.deepcopy(uLitList)
                         for x in temp:
-                            x.append(eachOption)
+                            x.append(eachOption[0])
                         newList.extend(temp)
                     uLitList = newList
 

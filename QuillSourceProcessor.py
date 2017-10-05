@@ -272,10 +272,6 @@ class QuillSourceProcessor(object):
         options = []
         optmap = {}
         for litList in convertedList:
-            if type(litList[0]) == tuple:
-                options.append("".join([l[0] for l in litList]))
-                optmap["".join([l[0] for l in litList])] = [l[0] for l in litList]
-            else:
                 options.append("".join(litList))
                 optmap["".join(litList)] = litList
         # options = ["".join([l[0] for l in litList]) for litList in convertedList]
