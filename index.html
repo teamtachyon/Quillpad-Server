@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Quillpad-server by CognirelTech</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Quillpad-server</h1>
+        <p class="header">Quillpad Server</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/CognirelTech/Quillpad-Server/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/CognirelTech/Quillpad-Server/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/CognirelTech/Quillpad-Server">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/CognirelTech">CognirelTech</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="quillpad-transliteration-server" class="anchor" href="#quillpad-transliteration-server" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quillpad Transliteration Server</h1>
+
+<p>Quillpad is an indic language input technology that revolutionized the Indian language typing scene. It is one of the most popular Indic input technologies with more than a billion words typed on the website alone.</p>
+
+<blockquote>
+<p>Quillpad pioneered the successful use of machine learning for 
+building a predictive language input technology. 
+Quillpad has been rated as the best by many organisations that have embraced Quillpad.</p>
+</blockquote>
+
+<h3>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Version</h3>
+
+<p>1.0.1</p>
+
+<h3>
+<a id="preparation" class="anchor" href="#preparation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Preparation</h3>
+
+<p>There are several archive files in the repository which have to be extracted, these include trained transliteration models and additional text files necessary for the Quillpad Server</p>
+
+<ul>
+<li> CherryPy-3.2.2.tar.gz</li>
+<li> EnglishPronouncingTrees.tar.bz2</li>
+<li> IndianPronouncingTrees.tar.bz2</li>
+<li> additional_text_files.zip</li>
+<li> bengali.tar.bz2</li>
+<li> gujarati.tar.bz2</li>
+<li> hindi.tar.bz2</li>
+<li> kannada.tar.bz2</li>
+<li> malayalam.tar.bz2</li>
+<li> marathi.tar.bz2</li>
+<li> nepali.tar.bz2</li>
+<li> punjabi.tar.bz2</li>
+<li> tamil.tar.bz2</li>
+<li> telugu.tar.bz2</li>
+<li>
+<p>unique_word_files.zip</p>
+
+<p><strong>Kindly extract all of these archives into the repository folder itself.</strong></p>
+</li>
+</ul>
+
+<h3>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h3>
+
+<p>Quillpad Server requires <a href="https://www.python.org/downloads/">Python 2.7</a> to run.</p>
+
+<p>First, we need to compile the Quillpad Model loader that will be used to load the trained transliteration models</p>
+
+<div class="highlight highlight-source-shell"><pre>   $ <span class="pl-c1">cd</span> Python<span class="pl-cce">\ </span>Cart/python
+   $ python setup.py build_ext --inplace
+   $ cp QuillCCart.so ../../
+   $ <span class="pl-c1">cd</span> ../../</pre></div>
+
+<p>Now, the Quillpad Server is ready to run</p>
+
+<div class="highlight highlight-source-shell"><pre>   $ python startquill_cherry.py</pre></div>
+
+<p>### Additional Information</p>
+
+<ul>
+<li><p>Quillpad runs on port number 8090 (Additional configuration parameters are in <em>quill_cherry8088.conf</em>)</p></li>
+<li>
+<p><em>processWordJSON</em> and <em>processWord</em> are the API endpoints over which the transliteration server can be accessed.</p>
+
+<blockquote>
+<p>Example:</p>
+</blockquote>
+
+<ul>
+<li>localhost:8090/processWordJSON?inString=hello&amp;lang=hindi</li>
+<li>localhost:8090/processWordJSON?inString=hello&amp;lang=kannada</li>
+</ul>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

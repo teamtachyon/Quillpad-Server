@@ -1,5 +1,3 @@
-syntax: glob
-
 *.pyc
 *.txt
 *.so
@@ -23,3 +21,4 @@ dump/*
 *.zip
 *.bz2
 *.gz
+Python Cart/python/build/

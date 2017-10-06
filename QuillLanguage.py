@@ -99,7 +99,7 @@ class QuillLanguage(object):
                         else :
                             uLiteralChain.append(keyCART.letterToClassID(cWord, True))
                 else:
-                    uLiteralChain.append([''])
+                    uLiteralChain.append([('', 1.0)])
 
                 focus += len(code)
 
@@ -117,7 +117,7 @@ class QuillLanguage(object):
                     for eachOption in options:
                         temp = copy.deepcopy(uLitList)
                         for x in temp:
-                            x.append(eachOption)
+                            x.append(eachOption[0])
                         newList.extend(temp)
                     uLitList = newList
 
