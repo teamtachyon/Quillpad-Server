@@ -124,7 +124,7 @@ class QuillLanguage(object):
             unicodeCharListOfList = [self.removeEpsilons(uLitSingle) for uLitSingle in uLitList]
             validOutput =[]
             for charList in unicodeCharListOfList:
-                if (self.isValidWord("".join([c[0] for c in charList]))) == True:
+                if (self.isValidWord("".join(charList))) == True:
                     validOutput.append(charList)
                 else:
                     count = count -1 

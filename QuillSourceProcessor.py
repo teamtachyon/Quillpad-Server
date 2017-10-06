@@ -272,8 +272,8 @@ class QuillSourceProcessor(object):
         options = []
         optmap = {}
         for litList in convertedList:
-                options.append("".join(litList))
-                optmap["".join(litList)] = litList
+            options.append("".join(litList))
+            optmap["".join(litList)] = litList
         # options = ["".join([l[0] for l in litList]) for litList in convertedList]
 
         def dictSort(dlang, arr):
